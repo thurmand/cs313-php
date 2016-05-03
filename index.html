@@ -2,39 +2,104 @@
 <html>
     <head>
         <title>Home Page</title>
+        <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
     </head>
     
     <body>
         <header>
+            <img class="col-md-2" id="me" src="/images/me.jpg">
             <h1>Welcome to Andrew's Homepage</h1>
             <hr>
-            <div><a href="assignments/index.html">Assignments</a></div>
+            <div id="link">
+                <a href="assignments/index.html">Assignments</a>
+            </div>
         </header>
         
         <main>
-            <div><p>My name is Andrew Thurman. I am a current student at Brigham Young University-Idaho.
-                    I am studying Software Enigneering. My estimated graduation date is July 2017
+            <div id="Content">
+                <p class="lead">My name is Andrew Thurman. I am a current student at Brigham Young University-Idaho.
+                    I am studying Software Enigneering. My estimated graduation date is July 2017.
                 </p>
-                <p>I enjoy out door activities such as camping, canoeing, shooting, etc.
-                    I like hangingout with my friends and have fun.
+                     
+                <p class="lead">I enjoy out door activities such as camping, canoeing, shooting, etc.
+                    I like hangingout with my friends and have fun. I make the most of things and like
+                    meeting new people.
                 </p>
-                <p>
-                    I am currently working on my own app for those that like to play Role Playing games.
+                
+                <p class="lead">
+                   I have worked with many people and on many projects for school. 
+                </p>
+                
+                <p class="lead">
+                    I am currently working on a personal project. MY project is an app for those that like to play Role Playing games.
                     This app is for a RP game called Deatwatch. 
                     It is for people to play with others around the world on their phones instead having to look
                     for people and having to get together in person.
                 </p>
-                <img id="img1" src="">
-                <img id="img2" src="">
-                <p>
+                
+                <h2>Screen Shots of App</h2>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#myCarousel" data-slide-to="1"></li>
+                      <li data-target="#myCarousel" data-slide-to="2"></li>
+                      <li data-target="#myCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                      <div class="item active">
+                        <img src="/images/mainscreen.png" alt="mainscreen">
+                      </div>
+
+                      <div class="item">
+                        <img src="/images/stats.png" alt="Stats">
+                      </div>
+
+                      <div class="item">
+                        <img src="images/login.png" alt="login" >
+                      </div>
+
+                      <div class="item">
+                        <img src="images/register.png" alt="register">
+                      </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                      <span class="arrow">&#8592</span>
+                      
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                        <span class="arrow">&#8594</span>                 
+                    </a>
+                </div>
+<!--
+                <div id="imgs">
+                    <img class="col-md-6" src="/images/mainscreen.png">
+                    <img class="col-md-6" src="/images/stats.png">
+                    <img class="col-md-6" src="images/login.png">
+                    <img class="col-md-6" src="images/register.png">
+                </div>
+-->
+                <p class="lead">
                     There is still alot that needs to be done. I am working on the interface as well
                     as the backend of the app. I am hoping that I can get it working in the next few months.
                 </p>
+                
+                 
+            
             </div>
         </main>
         
         <footer>
+            <hr>
             
-        </footer>
+    </footer>
     </body>
 </html>
+
