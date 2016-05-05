@@ -16,7 +16,7 @@
     font-weight: bold;
 }
 
-#q1Pic
+#q4Pic
 {
     background-image: url(/images/date.jpg);
     background-repeat: no-repeat;
@@ -27,6 +27,11 @@
     box-shadow: 10px 10px 5px #888888;
 }
 
+#q1Radio
+{
+    display: none;
+}
+
 #q2
 {
     padding-top: 20px;
@@ -34,23 +39,65 @@
 
 #q2Checks
 {
+    display: none;
+/*
     font-size: 200%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-around;
+*/
 }
 
-#seasons img
+#seasons
 {
-/*
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-*/
     width: 100%;
     height: 600px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.seasonSel
+{
+    width: 25%; 
+    color: azure;
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    transition: bottom .5s ease;
+}
+
+.seasonSel:hover
+{
+    position: relative;
+    bottom: 20px;
+}
+
+#sFal1
+{
+    background-image: url(/images/seasons_fall.jpg);
+}
+
+#sWin2
+{
+    background-image: url(/images/seasons_winter.jpg);
+}
+
+#sSpr3
+{
+    background-image: url(/images/seasons_spring.jpg);
+}
+
+#sSum4
+{
+    background-image: url(/images/seasons_summer.jpg);
 }
 
 #imgBox
@@ -117,6 +164,29 @@
 #q3
 {
     padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+#q3cont
+{
+    height: 500px;
+    background-image: url(/images/toothbrush.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#q3cont input
+{
+    border-radius: 10px;
+    background-color: lightgray;
+    font-size: 250%;
+    width: 50%;
+    height: 20%;
+    position: relative;
+    left: 250px;
+    top: 200px;
 }
 
 #q4
@@ -128,5 +198,16 @@
 }
 
 
-
+button
+{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    bottom: 200px;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    font-size: 200%;
+    font-weight: bold;
+    box-shadow: 10px 10px 5px #888888;
+}
 

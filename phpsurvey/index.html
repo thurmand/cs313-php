@@ -1,11 +1,15 @@
 <?php
+    session_start()
+    // if is set session visted
 
+    // set session
+    //else go to results
 ?>
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Assignments</title>
+        <title>Survey</title>
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/style.css">
         <link rel="stylesheet" type="text/css" href="style.css">
@@ -22,55 +26,62 @@
         </header>
         
         <main>
-            <form action="phpresults" method="post">
+            <form action="phpsubmit.php" method="post">
             <div id="mainContent" class="lead">
                         
                 <div id="q1">
-                    <div class="question">Favorite Pass Time</div>
+                    <div class="question">Favorite Pastime</div>
+                    <div id="q1Radio">
+                        <input id="p1" type="radio" name="pasTime" value="sports">
+                        <input id="p2" type="radio" name="pasTime" value="video games">
+                        <input id="p3" type="radio" name="pasTime" value="outdoors">
+                        <input id="p4" type="radio" name="pasTime" value="cooking">
+                        <input id="p5" type="radio" name="pasTime" value="reading">
+                    </div>
                     <div id="imgBox">
-                        <div id="img1" class="imgs" name="" value="sports">
+                        <div id="img1" class="imgs">
                             <div class="imgTitle">Sports</div>
                         </div>
-                        <div id="img2" class="imgs" name="" value="video games">
+                        <div id="img2" class="imgs">
                             <div class="imgTitle">Video Games</div>
                         </div>
-                        <div id="img3" class="imgs" name="" value="outdoors">
+                        <div id="img3" class="imgs">
                             <div class="imgTitle">Outdoors</div>
                         </div>
-                        <div id="img4" class="imgs" name="" value="cooking">
+                        <div id="img4" class="imgs">
                             <div class="imgTitle">Cooking</div>
                         </div>
-                        <div id="img5" class="imgs" name="" value="reading">
+                        <div id="img5" class="imgs">
                             <div class="imgTitle">Reading</div>
                         </div>
                     </div>
                 </div>
                 
                 <div id="q2">
-                    <div class="question">Favorite Seaon</div>
+                    <div class="question">Favorite Seasons</div>
                     <div id="q2Checks">
-                        <input type="checkbox" name="season" value=""> Fall
-                        <input type="checkbox" name="season" value=""> Winter
-                        <input type="checkbox" name="season" value=""> Spring
-                        <input type="checkbox" name="season" value=""> Summer
+                        <input id="check1" type="checkbox" name="season[]" value="fall">
+                        <input id="check2" type="checkbox" name="season[]" value="winter">
+                        <input id="check3" type="checkbox" name="season[]" value="spring">
+                        <input id="check4" type="checkbox" name="season[]" value="summer">
                     </div>
                     
                     <div id="seasons">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <img src="/images/seasons.jpg">
+                        <div id="sFal1" class="seasonSel">Fall</div>
+                        <div id="sWin2" class="seasonSel">Winter</div>
+                        <div id="sSpr3" class="seasonSel">Spring</div>
+                        <div id="sSum4" class="seasonSel">Summer</div>
                     </div>
                 </div>
                 
                 <div id="q3">
-                    <div class="question">Question #3</div>
-                    
-                    
+                    <div class="question">Color Of Toothbrush</div>
+                    <div id="q3cont">
+                        <input text="text" name="tbColor">
+                    </div>
                 </div>
                 
-                <div id="q1Pic"></div>
+                <div id="q4Pic"></div>
                 <div id="q4">
                     <div class="question">First Date</div>
                     <br>
@@ -84,7 +95,12 @@
                     <br>
                 </div>
                 
+                <div>
+                    <button type="submit" value="submit">Submit</button>
+                </div>
+                
             </div>
+                
             </form>
         </main>
             
