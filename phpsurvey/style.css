@@ -1,0 +1,132 @@
+#mainContent
+{
+    padding: 0px 30px;
+    font-family: sans-serif;
+    font-size: 200%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+.question
+{
+    font-size: 200%;
+    font-weight: bold;
+}
+
+#q1Pic
+{
+    background-image: url(/images/date.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    opacity: .6;
+    height: 600px;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#q2
+{
+    padding-top: 20px;
+}
+
+#q2Checks
+{
+    font-size: 200%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+#seasons img
+{
+/*
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+*/
+    width: 100%;
+    height: 600px;
+}
+
+#imgBox
+{
+    height: 600px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+.imgTitle
+{
+    padding-top: 15px;
+}
+
+.imgs
+{
+    color: azure;
+    font-size: 140%;
+    font-weight: bold;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 33%;
+    transition: width 1s ease;
+}
+
+.imgs:hover
+{
+    opacity: .8;
+}
+
+#img1
+{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: url(/images/sports.jpg);  
+}
+
+#img2
+{
+    background-image: url(/images/videogames.jpg);
+}
+
+#img3
+{
+    background-image: url(/images/outdoors.jpg);
+}
+
+#img4
+{
+    background-image: url(/images/cooking.jpg);
+}
+
+#img5
+{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url(/images/reading.jpg);
+    background-color: #888888;
+}
+
+#q3
+{
+    padding-top: 20px;
+}
+
+#q4
+{
+    color: black;
+    padding-left: 50px;
+    position: relative;
+    bottom: 580px;
+}
+
+
+
+
