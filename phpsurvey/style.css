@@ -1,3 +1,8 @@
+body
+{
+    height: 100vh; 
+}
+
 #mainContent
 {
     padding: 0px 30px;
@@ -40,13 +45,6 @@
 #q2Checks
 {
     display: none;
-/*
-    font-size: 200%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-*/
 }
 
 #seasons
@@ -78,6 +76,7 @@
 {
     position: relative;
     bottom: 20px;
+    cursor: pointer;
 }
 
 #sFal1
@@ -129,6 +128,7 @@
 .imgs:hover
 {
     opacity: .8;
+    cursor: pointer;
 }
 
 #img1
@@ -211,3 +211,45 @@ button
     box-shadow: 10px 10px 5px #888888;
 }
 
+.list
+{
+    margin-right: 5px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background-color: deepskyblue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    
+}
+
+#listOitems
+{
+    overflow: scroll;
+    height: 650px;
+}
+
+.item
+{
+    width: 25%;
+}
+
+#lTitle
+{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.title
+{
+    font-weight: bold;
+    text-align: left;
+    font-size: 250%;
+    width: 25%;
+   
+}

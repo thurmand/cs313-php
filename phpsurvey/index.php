@@ -1,9 +1,9 @@
-<?php
-    session_start()
-    // if is set session visted
-
-    // set session
-    //else go to results
+<?PHP
+    session_start();
+    
+    if(isset($_SESSION['visit'])){
+        header('Location: /phpsurvey/phpresults.php');
+    }    
 ?>
 
 <!DOCTYPE html>
@@ -32,11 +32,11 @@
                 <div id="q1">
                     <div class="question">Favorite Pastime</div>
                     <div id="q1Radio">
-                        <input id="p1" type="radio" name="pasTime" value="sports">
-                        <input id="p2" type="radio" name="pasTime" value="video games">
-                        <input id="p3" type="radio" name="pasTime" value="outdoors">
-                        <input id="p4" type="radio" name="pasTime" value="cooking">
-                        <input id="p5" type="radio" name="pasTime" value="reading">
+                        <input id="p1" type="radio" name="pasTime" value="Sports">
+                        <input id="p2" type="radio" name="pasTime" value="Video Games">
+                        <input id="p3" type="radio" name="pasTime" value="Outdoors">
+                        <input id="p4" type="radio" name="pasTime" value="Cooking">
+                        <input id="p5" type="radio" name="pasTime" value="Reading">
                     </div>
                     <div id="imgBox">
                         <div id="img1" class="imgs">
@@ -60,10 +60,10 @@
                 <div id="q2">
                     <div class="question">Favorite Seasons</div>
                     <div id="q2Checks">
-                        <input id="check1" type="checkbox" name="season[]" value="fall">
-                        <input id="check2" type="checkbox" name="season[]" value="winter">
-                        <input id="check3" type="checkbox" name="season[]" value="spring">
-                        <input id="check4" type="checkbox" name="season[]" value="summer">
+                        <input id="check1" type="checkbox" name="season[]" value="Fall">
+                        <input id="check2" type="checkbox" name="season[]" value="Winter">
+                        <input id="check3" type="checkbox" name="season[]" value="Spring">
+                        <input id="check4" type="checkbox" name="season[]" value="Summer">
                     </div>
                     
                     <div id="seasons">
@@ -77,21 +77,21 @@
                 <div id="q3">
                     <div class="question">Color Of Toothbrush</div>
                     <div id="q3cont">
-                        <input text="text" name="tbColor">
+                        <input text="text" name="tbColor" placeholder="Color...">
                     </div>
                 </div>
                 
                 <div id="q4Pic"></div>
                 <div id="q4">
-                    <div class="question">First Date</div>
+                    <div class="question">Best First Date Idea</div>
                     <br>
-                    <input type="radio" name="date" value="movie"> Go to a Movie
+                    <input type="radio" name="date" value="Movie"> Go to a Movie
                     <br>
-                    <input type="radio" name="date" value="dinner"> Dinner Date
+                    <input type="radio" name="date" value="Dinner"> Dinner
                     <br>
-                    <input type="radio" name="date" value="hang"> Hang out
+                    <input type="radio" name="date" value="Hang Out"> Hang out
                     <br>
-                    <input type="radio" name="date" value="icecream"> Get Ice Cream
+                    <input type="radio" name="date" value="Ice cream"> Get Ice Cream
                     <br>
                 </div>
                 
