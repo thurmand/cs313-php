@@ -83,7 +83,7 @@
                 
                 <div id="q4Pic"></div>
                 <div id="q4">
-                    <div class="question">Best First Date Idea</div>
+                    <div class="question">First Date Idea</div>
                     <br>
                     <input type="radio" name="date" value="Movie"> Go to a Movie
                     <br>
