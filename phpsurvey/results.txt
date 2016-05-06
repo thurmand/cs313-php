@@ -1,1 +1,0 @@
-<div class='item'>Video Games </div><div class='item'>Spring</div><div class='item'>Blue</div><div class='item'>Ice cream</div>
