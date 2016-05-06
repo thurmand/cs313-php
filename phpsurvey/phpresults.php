@@ -12,7 +12,7 @@
     
         <header>
         
-            <h1>The Results</h1>
+            <h1>Survey Results</h1>
             <hr>
         </header>        
         
@@ -39,7 +39,9 @@
         
         
         <footer>
-        
+            <div id="retry" onclick="location='reset.php'">
+                Retry    
+            </div>
             
             
         </footer>

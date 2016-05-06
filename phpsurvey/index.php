@@ -1,7 +1,7 @@
 <?PHP
     session_start();
     
-    if(isset($_SESSION['visit'])){
+    if($_SESSION['visit'] == true){
         header('Location: /phpsurvey/phpresults.php');
     }    
 ?>

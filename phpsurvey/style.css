@@ -251,5 +251,10 @@ button
     text-align: left;
     font-size: 250%;
     width: 25%;
-   
+}
+
+#retry
+{
+    color: aliceblue;
+    font-size: 50%;
 }
