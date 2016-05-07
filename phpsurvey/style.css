@@ -3,6 +3,13 @@ body
     height: 100vh; 
 }
 
+#warn
+{
+    font-size: 200%;
+    font-weight: bold;
+    color: red;
+}
+
 #mainContent
 {
     padding: 0px 30px;

@@ -1,9 +1,14 @@
 <?PHP
     session_start();
-    
+   
     if($_SESSION['visit'] == true){
         header('Location: /phpsurvey/phpresults.php');
-    }    
+    }
+    
+    if($_SESSION['redo'] == true)
+    {
+        echo "<div id='warn'>Not all Questions ansrewed. Please Try Again.</div>";
+    }
 ?>
 
 <!DOCTYPE html>

@@ -2,20 +2,42 @@
 
  session_start();
 
-$_SESSION['visit'] = true;
 
-$pasTime = $_POST["pasTime"];
-$season = $_POST["season"];
-$tbColor = htmlspecialchars($_POST["tbColor"]);
-$date = $_POST["date"];
+// Required field names
+$required = array('pasTime', 'season', 'tbColor', 'date');
 
-$line = "<div class='item'>$pasTime </div><div class='item'>" 
-    . implode(', ', $season) . "</div><div class='item'>$tbColor</div><div class='item'>$date</div>\n";
+// Loop over field names, make sure each one exists and is not empty
+$error = false;
+foreach($required as $field) {
+    if (empty($_POST[$field])) {
+        $error = true;
+  }
+}
 
-echo("$line");
+if($error)
+{
+    $_SESSION['redo'] = true;
+    header('Location: index.php');
+}
+else{
 
-file_put_contents("results.txt", $line, FILE_APPEND);
+    $_SESSION['visit'] = true;
+    $_SESSION['redo'] = false;
+    
+    $pasTime = $_POST["pasTime"];
+    $season = $_POST["season"];
+    $tbColor = htmlspecialchars($_POST["tbColor"]);
+    $date = $_POST["date"];
 
-header('Location: /phpsurvey/phpresults.php');
+    $line = "<div class='item'>$pasTime </div><div class='item'>" 
+        . implode(', ', $season) 
+        . "</div><div class='item'>$tbColor</div><div class='item'>$date</div>\n";
+
+    echo("$line");
+
+    file_put_contents("results.txt", $line, FILE_APPEND);
+
+    header('Location: /phpsurvey/phpresults.php');
+}
 
 ?>
