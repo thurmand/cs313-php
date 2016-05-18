@@ -11,10 +11,10 @@ $dbName = 'death_watch';
 
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
-$result = $db->query('SELECT id FROM users WHERE username=:userName AND password=:password');
+$stmt = $db->query('SELECT id FROM users WHERE username=:userName AND password=:password');
 $stmt->execute(array(':username' => $username, ':passwrod' => $password));
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-echo $result;
+echo $stmt;
 
 ?> 
