@@ -1,7 +1,9 @@
 <?php
 
-$username = $_POST['usernam'];
-$p =$_POST['pass'];
+$username = htmlspecialchars($_POST['usernam']);
+$p = htmlspecialchars($_POST['pass']);
+
+
 
 
 ?>
