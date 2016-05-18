@@ -17,7 +17,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(sizeof($rows) == 1){
     echo "you made it";
-//    header('Location: /phpsurvey/phpresults.php');
+    header('Location: /phpdb/dashboard/index.php');
 }
 else
 {

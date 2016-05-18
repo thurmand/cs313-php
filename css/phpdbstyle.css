@@ -40,6 +40,14 @@ input
     color: white;
 }
 
+#warn
+{
+    padding-top: 10px;
+    color: red;
+    font-size: 50%;
+    display: none;
+}
+
 button
 {
     margin-top: 20px;

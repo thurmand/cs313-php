@@ -7,6 +7,7 @@
         <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/dwLogin.js"></script>
     </head>
 
 <body>
@@ -16,22 +17,23 @@
     </header>
 
     <main>
-        <form action="phpLogin.php" method="post">
+        <form id="dwform" action="phpLogin.php" method="post">
             
             <div>
                 Username: <br>
-                <input type="text" name="username">
+                <input id="uN" type="text" name="username">
             </div>
             
             <div>
                 Password: <br>
                 
-                <input type="password" name="pass">
+                <input id="ps" type="password" name="pass">
             </div>
             <div>
-                <button type="submit" value="submit">enter</button>
+                <span id="warn">Need Username and Password</span>
             </div>
         </form>
+        <button onclick="submitForm()">enter</button>
     </main>
     
     <footer>
