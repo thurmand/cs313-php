@@ -1,0 +1,53 @@
+body
+{
+    margin: auto;
+    background-image: url(/images/warhammerwings.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-weight: 500;
+    font-family: 'Cinzel', serif;
+    max-width: 970px;
+}
+
+header
+{
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    margin-bottom: 80px;
+}
+
+main
+{
+    background-color:rgba(0, 0, 0, 0.7);
+    padding-top: 15px;
+    border-radius: 15px;
+    font-size: 300%;
+    color: lavenderblush;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+    padding-bottom: 30px;
+}
+
+input
+{
+    background-color: darkgray;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+button
+{
+    margin-top: 20px;
+    background-color: black;
+    width: 33%;
+    border-radius: 10px;
+}
+
+button:hover
+{
+    background-color: darkgrey;
+}
