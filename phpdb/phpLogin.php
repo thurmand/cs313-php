@@ -12,7 +12,14 @@ $dbName = 'death_watch';
 $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
 
 $stmt = $db->query('SELECT id FROM users WHERE username=:userName AND password=:password');
-echo $stmt;
+
+if($stmt = false){
+    echo false;
+}
+else
+{
+    echo true;
+}
 /*$stmt->execute(array(':username' => $username, ':passwrod' => $password));
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
