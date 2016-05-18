@@ -14,11 +14,11 @@ $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword)
 $stmt = $db->query('SELECT id FROM users WHERE username=:userName AND password=:password');
 
 if($stmt == false){
-    echo false;
+    echo 'false';
 }
 else
 {
-    echo true;
+    echo 'true';
 }
 /*$stmt->execute(array(':username' => $username, ':passwrod' => $password));
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
