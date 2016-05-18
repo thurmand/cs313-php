@@ -33,6 +33,7 @@ main
 
 input
 {
+    font-family: sans-serif;
     background-color: darkgray;
     text-align: center;
     border-radius: 10px;
