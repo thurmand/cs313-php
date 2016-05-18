@@ -13,7 +13,7 @@ $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword)
 
 $stmt = $db->query('SELECT id FROM users WHERE username=:userName AND password=:password');
 
-if($stmt = false){
+if($stmt == false){
     echo false;
 }
 else
