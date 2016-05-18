@@ -1,43 +1,32 @@
 <?php
 
- session_start();
+$username = htmlspecialchars($_POST['username']);
+$p = htmlspecialchars($_POST['pass']);
 
+echo $username;
+echo $p;
 
-// Required field names
-$required = array('pasTime', 'season', 'tbColor', 'date');
+$dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
+$dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
+$dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
+$dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
+$dbName = 'death_watch';
 
-// Loop over field names, make sure each one exists and is not empty
-$error = false;
-foreach($required as $field) {
-    if (empty($_POST[$field])) {
-        $error = true;
-  }
+$db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
+
+$stmt = $db->prepare("SELECT id FROM users WHERE username=:username AND password=:password");
+$stmt->execute(array(':username' => $username, ':password' => $p));
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+var_dump($rows);
+
+if(sizeof($rows) == 1){
+  echo "you made it";
+
 }
-
-if($error)
+else
 {
-    $_SESSION['redo'] = true;
-    header('Location: index.php');
-}
-else{
 
-    $_SESSION['visit'] = true;
-    $_SESSION['redo'] = false;
-    
-    $pasTime = $_POST["pasTime"];
-    $season = $_POST["season"];
-    $tbColor = htmlspecialchars($_POST["tbColor"]);
-    $date = $_POST["date"];
-
-    $line = "<div class='item'>$pasTime </div><div class='item'>" 
-        . implode(', ', $season) 
-        . "</div><div class='item'>$tbColor</div><div class='item'>$date</div>\n";
-
-    echo("$line");
-
-    file_put_contents("results.txt", $line, FILE_APPEND);
-
-    header('Location: /phpsurvey/phpresults.php');
 }
 
 ?>
