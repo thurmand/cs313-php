@@ -1,5 +1,8 @@
 body
 {
+    margin: auto;
+    max-width: 970px;
     color: white;
     background-color: black;
 }
+
