@@ -20,7 +20,7 @@ $stmt->execute(array(':username' => $username, ':password' => $p));
 $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(sizeof($userID) == 1){
-    header('Location: /phpdb/dashboard/index.html');
+    header('Location: /phpdb/dashboard/index.php');
 }
 else
 {
