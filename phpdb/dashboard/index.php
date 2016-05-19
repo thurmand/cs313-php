@@ -12,7 +12,7 @@
     $stmt->execute(array(':username' => $username, ':password' => $p));
     $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
-    echo $userID['id']
+    echo $userID['id'];
 ?>
 
 

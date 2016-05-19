@@ -3,6 +3,10 @@
 $username = htmlspecialchars($_POST['username']);
 $p = htmlspecialchars($_POST['pass']);
 
+if(!isset($username) || !isset($p)){
+    header('Location: index.html');
+}
+
 $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
 $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
 $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
@@ -17,6 +21,10 @@ $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(sizeof($userID) == 1){
     header('Location: /phpdb/dashboard/index.php');
+}
+else
+{
+     header('Location: index.html');
 }
 
 ?>
