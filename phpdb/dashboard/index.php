@@ -14,10 +14,10 @@
     
     if(sizeof($userID) != 1)
     {
-    header('Location: index.html');
+        header('Location: /phpdb/index.html');
     }
 
-    echo $userID['id'];
+    echo $userID;
 ?>
 
 
@@ -35,6 +35,7 @@
 <body>
 
     <header>
+        Welcome to your dashboard
     </header>
 
     <main>
