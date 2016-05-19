@@ -23,7 +23,7 @@ $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(sizeof($userID) == 1){
     $_SESSION['userID'] = $userID[0]['id'];
-    header('Location: /phpdb/dashboard/index.php');
+    header('Location: /deathwatch/dashboard/index.php');
 }
 else
 {
