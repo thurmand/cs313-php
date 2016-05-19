@@ -3,9 +3,14 @@ body
     margin: auto;
     background-image: url(/images/warhammerwings.jpg);
     background-repeat: no-repeat;
-    background-size: auto;
+/*    background-size: cover;*/
+    background-position: 50% 0;
     font-weight: 500;
     font-family: 'Cinzel', serif;
+}
+
+#content
+{
     max-width: 970px;
 }
 
@@ -44,7 +49,7 @@ input
 {
     padding-top: 10px;
     color: red;
-    font-size: 50%;
+    font-size: 40%;
     display: none;
 }
 

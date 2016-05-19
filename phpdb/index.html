@@ -14,34 +14,34 @@
         <script src="/js/dwLogin.js"></script>
     </head>
 
-<body>
+<body id="body">
+    <div id="content">
+        <header>
+            <img src="/images/deathwatch-logo.png">
+        </header>
 
-    <header>
-        <img src="/images/deathwatch-logo.png">
-    </header>
+        <main>
+            <form id="dwform" action="phpLogin.php" method="post">
 
-    <main>
-        <form id="dwform" action="phpLogin.php" method="post">
-            
-            <div>
-                Username: <br>
-                <input id="uN" type="text" name="username">
-            </div>
-            
-            <div>
-                Password: <br>
-                
-                <input id="ps" type="password" name="pass">
-            </div>
-            <div>
-                <span id="warn">Need Username and Password</span>
-            </div>
-        </form>
-        <button onclick="submitForm()">enter</button>
-    </main>
-    
-    <footer>
-    </footer>
-    
+                <div>
+                    Username: <br>
+                    <input id="uN" type="text" name="username">
+                </div>
+
+                <div>
+                    Password: <br>
+
+                    <input id="ps" type="password" name="pass">
+                </div>
+                <div>
+                    <span id="warn">Username and Password is missing or wrong</span>
+                </div>
+            </form>
+            <button onclick="submitForm()">enter</button>
+        </main>
+
+        <footer>
+        </footer>
+    </div>
 </body>
 </html>

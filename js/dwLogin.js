@@ -10,5 +10,8 @@ function submitForm(){
     else{
         document.getElementById("dwform").submit();
     }
-    
+}
+
+window.onresize = function(event){
+    document.getElementById("body").style.width = innerWidth;
 }
