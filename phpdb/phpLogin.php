@@ -13,15 +13,10 @@ $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword)
 
 $stmt = $db->prepare("SELECT id FROM users WHERE username=:username AND password=:password");
 $stmt->execute(array(':username' => $username, ':password' => $p));
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-if(sizeof($rows) == 1){
-    echo "you made it";
+if(sizeof($userID) == 1){
     header('Location: /phpdb/dashboard/index.php');
-}
-else
-{
-    
 }
 
 ?>
