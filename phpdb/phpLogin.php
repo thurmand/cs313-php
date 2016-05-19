@@ -27,7 +27,8 @@ if(sizeof($userID) == 1){
 }
 else
 {
-     header('Location: index.html');
+    $_SESSION['failed'] = 'ture';
+    header('Location: index.html');
 }
 
 ?>

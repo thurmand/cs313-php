@@ -2,7 +2,7 @@ body
 {
     background-image: url(/images/warhammerwings.jpg);
     background-repeat: no-repeat;
-/*    background-size: cover;*/
+    background-size: cover;
     background-position: 50% 0;
     font-weight: 500;
     font-family: 'Cinzel', serif;
@@ -38,8 +38,9 @@ main
 
 input
 {
+    opacity: .6;
     font-family: sans-serif;
-    background-color: darkgray;
+    background-color: black;
     text-align: center;
     border-radius: 10px;
     color: white;
