@@ -11,6 +11,11 @@
     $stmt = $db->prepare("SELECT id FROM users WHERE username=:username AND password=:password");
     $stmt->execute(array(':username' => $username, ':password' => $p));
     $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
+    if(sizeof($userID) != 1)
+    {
+    header('Location: index.html');
+    }
 
     echo $userID['id'];
 ?>
