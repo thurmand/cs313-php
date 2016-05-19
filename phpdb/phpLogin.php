@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $username = htmlspecialchars($_POST['username']);
 $p = htmlspecialchars($_POST['pass']);
 
@@ -20,6 +22,7 @@ $stmt->execute(array(':username' => $username, ':password' => $p));
 $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(sizeof($userID) == 1){
+    $_SESSION['userID'] = $userID;
     header('Location: /phpdb/dashboard/index.php');
 }
 else
