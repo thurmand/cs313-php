@@ -22,7 +22,7 @@ $stmt->execute(array(':username' => $username, ':password' => $p));
 $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if(sizeof($userID) == 1){
-    $_SESSION['userID'] = $userID;
+    $_SESSION['userID'] = $userID[0]['id'];
     header('Location: /phpdb/dashboard/index.php');
 }
 else

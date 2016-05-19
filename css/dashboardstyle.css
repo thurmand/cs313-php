@@ -1,8 +1,129 @@
 body
 {
-    margin: auto;
-    max-width: 970px;
-    color: white;
+    font-family: 'Cinzel', serif; 
+    max-width: 100%;
+    color: cornsilk;
     background-color: black;
 }
 
+#dashboard
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#sideBar
+{
+/*    height: 500px;*/
+    background-color: darkgray;
+    width: 15%;
+    
+}
+
+#main
+{
+/*    height: 500px;*/
+    width: 85%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.divider
+{
+    width: .3%;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.title
+{
+    margin: auto;
+    text-align: center;
+    font-size: 300%;
+}
+
+#skills
+{ 
+    width: 32%;
+}
+
+#skillList
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.skillBlock
+{
+    font-size: 180%;
+    margin: 5px 0px;
+    text-align: center;
+    width: 50%;
+/*    height: 80px;*/
+}
+
+.num
+{
+    font-size: 220%;
+}
+
+#armour
+{
+    width: 32%; 
+}
+
+#armourView
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#armourList
+{
+    text-align: center;
+    font-size: 220%;
+    width: 30%;
+}
+
+.armourBlock1
+{
+    margin-top: 25px;
+}
+
+.armourBlock2
+{
+    margin-top: 10px;
+}
+
+.armourBlock3
+{
+    margin-top: 10px
+}
+
+.armourBlock4
+{
+    margin-top: 75px;
+}
+
+.arNum
+{
+    font-size: 140%;
+}
+
+img
+{
+    width: 70%;
+    height: 100%;
+}
+
+#weapons
+{
+    
+    width: 32%;
+}

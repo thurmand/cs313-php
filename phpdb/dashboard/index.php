@@ -12,14 +12,14 @@
     $stmt->execute(array(':username' => $username, ':password' => $p));
     $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);*/
 
-    echo $_SESSION['userID'];
+    $userID = $_SESSION['userID'];
 ?>
 
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home Page</title>
+        <title>Dashboard</title>
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/dashboardstyle.css">
         <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
@@ -30,10 +30,16 @@
 <body>
 
     <header>
-        Welcome to your dashboard
+        Dashboard
     </header>
-
+    
+    <div id="sideBar">
+    </div>
+    
     <main>
+        <div id="skills"></div>
+        <div id="armour"></div>
+        <div id="weapons"></div>
     </main>
 
     <footer>
