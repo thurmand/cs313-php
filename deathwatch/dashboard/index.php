@@ -38,6 +38,9 @@
     $stmt->execute(array(':userID' => $userID));
     $stats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    $num = str_split($stats[0]['toughness'], 1);
+    $armorMulti = intval($num[0]) * 2;
+
     $stmt = $db->prepare("SELECT name, head, arms, legs, body
                             FROM armor a
                             JOIN users_armor uA
@@ -87,39 +90,48 @@
                 <div id="skillList">
                     <div class="skillBlock">
                         Weapon Skill
-                        <div class="num"><?PHP echo $stats[0]['weapon'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['weapon'];?></div>
                     </div>
                     <div class="skillBlock">
                         Ballistic Skill
-                        <div class="num"><?PHP echo $stats[0]['ballistic'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['ballistic'];?></div>
                     </div>
                     <div class="skillBlock">
                         Strength
-                        <div class="num"><?PHP echo $stats[0]['strength'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['strength'];?></div>
                     </div>
                     <div class="skillBlock">
                         Toughness
-                        <div class="num"><?PHP echo $stats[0]['toughness'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['toughness'];?></div>
                     </div>
                     <div class="skillBlock">
                         Agility
-                        <div class="num"><?PHP echo $stats[0]['agility'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['agility'];?></div>
                     </div>
                     <div class="skillBlock">
                         Intelligence
-                        <div class="num"><?PHP echo $stats[0]['intelligence'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['intelligence'];?></div>
                     </div>
                     <div class="skillBlock">
                         Preception
-                        <div class="num"><?PHP echo $stats[0]['preception'];?></div>
+                        <div class="num"
+                             ><?PHP echo $stats[0]['preception'];?></div>
                     </div>
                     <div class="skillBlock">
                         Will Power
-                        <div class="num"><?PHP echo $stats[0]['will_power'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['will_power'];?></div>
                     </div>
                     <div class="skillBlock">
                         Fellowship
-                        <div class="num"><?PHP echo $stats[0]['fellowship'];?></div>
+                        <div class="num">
+                            <?PHP echo $stats[0]['fellowship'];?></div>
                     </div>
                 </div>
             </div>
@@ -127,27 +139,36 @@
             <div id="armour">
                 <div class="title">Armour</div>
                 <hr>
-                <div id="armourViewTitle"><?php echo $armour[0]['name'];?></div>
+                <div id="armourViewTitle">
+                    <?php echo $armour[0]['name'];?></div>
                 <div id="armourView">
                     <div id="armourList">
                         <div class="armourBlock">
                             Head
-                            <div class="arNum"><?php echo $armour[0]['head'];?> (8)</div>
+                            <div class="arNum">
+                                <?php echo $armour[0]['head']  .
+                                     " (" . $armorMulti . ")";?></div>
                         </div>
                         <hr>
                         <div class="armourBlock">
                             Body
-                            <div class="arNum"><?php echo $armour[0]['body'];?> (8)</div>
+                            <div class="arNum">
+                                <?php echo $armour[0]['body'] .
+                                     " (" . $armorMulti . ")";?></div>
                         </div>
                         <hr>
                         <div class="armourBlock">
                             Arms
-                            <div class="arNum"><?php echo $armour[0]['arms'];?> (8)</div>
+                            <div class="arNum">
+                                <?php echo $armour[0]['arms'] .
+                                     " (" . $armorMulti . ")";?></div>
                         </div>
                         <hr>
                         <div class="armourBlock">
                             Legs
-                            <div class="arNum"><?php echo $armour[0]['legs'];?> (8)</div>
+                            <div class="arNum">
+                                <?php echo $armour[0]['legs'] .
+                                     " (" . $armorMulti . ")";?></div>
                         </div>
                     </div>
                     <img src="/images/Mark-7-Power-Armour-Half.png">
