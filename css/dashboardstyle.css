@@ -29,6 +29,11 @@ body
     flex-direction: column;
 }
 
+.sideTitle
+{
+    font-size: 1.5vw;
+}
+
 #logout:hover
 {
     cursor: pointer;

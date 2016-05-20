@@ -76,10 +76,12 @@
     <div id="dashboard">
         
         <div id="sideBar">
-        
-            <?php echo $user[0]['username'] . 
-                '<br>' . $user[0]['char_name'];?>
+            <div class="sideTitle">Username:</div>
+            <div><?php echo $user[0]['username'];?></div>
+            <div class="sideTitle">Character Name:</div>
+            <div><?php echo $user[0]['char_name'];?></div>
             <div id="logout" onclick="location='logout.php'">Logout</div>
+            <div></div>
         
         </div>
     
