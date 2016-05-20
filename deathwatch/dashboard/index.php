@@ -150,7 +150,6 @@
                 <div class="title">Weapons</div>
                 <hr>
                 <div id="weaponList">
-                    
                     <?php 
                         foreach ($db->query('SELECT * FROM movie')as $row){
                         echo '<div class="weaponBlock">
@@ -161,16 +160,7 @@
                                 <hr>
                             </div>';
                         }
-                    ?>
-                    
-                    <div class="weaponBlock">
-                        <div>Astartes Heavy Bolter</div>
-                        <div>150m -/-/6 1d10+12X 5 60 Full Tearing</div>
-                        <div>Base Damge: 12</div>
-                        <div>Penetration: 5</div>
-                        <hr>
-                    </div>
-                                       
+                    ?>                                       
                 </div>
             </div>
         </div>
