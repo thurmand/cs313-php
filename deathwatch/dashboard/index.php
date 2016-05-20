@@ -40,6 +40,15 @@
     $stmt->execute(array(':userID' => $userID));
     $armour = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    $stmt = $db->prepare("SELECT name, description, damage, penetration
+                            FROM weapons w
+                            JOIN users_weapons uW
+                            ON w.id = uW.weapon_id
+                            WHERE uW.user_id = :userID;");
+    $stmt->execute(array(':userID' => $userID));
+    $weapon = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
 ?>
 
 
@@ -141,6 +150,18 @@
                 <div class="title">Weapons</div>
                 <hr>
                 <div id="weaponList">
+                    
+                    <?php 
+                        foreach ($db->query('SELECT * FROM movie')as $row){
+                        echo '<div class="weaponBlock">
+                                <div>' . $row['name'] . '</div>
+                                <div>'. $row['description'] . '</div>
+                                <div>Base Damage: ' . $row['damage'] . '</div>
+                                <div>Penetration: ' . $row['penetration'] . '</div>
+                                <hr>
+                            </div>';
+                        }
+                    ?>
                     
                     <div class="weaponBlock">
                         <div>Astartes Heavy Bolter</div>
