@@ -1,8 +1,3 @@
-<?php 
-    session_start();
-    $_SESSION['failed'] = false;
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -36,9 +31,6 @@
                 </div>
                 <div>
                     <span id="warn">Username and Password is missing</span>
-                    <?php  if($_SESSION['failed'] == true){
-                        echo 'Username or Password in Incorrect'
-                    }?>
                 </div>
             </form>
             <button onclick="submitForm()">enter</button>
