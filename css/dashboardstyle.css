@@ -1,5 +1,9 @@
 body
 {
+    background-image: url(/images/blackBackground.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0;
     font-family: 'Cinzel', serif; 
     max-width: 100%;
     color: cornsilk;
@@ -9,9 +13,11 @@ body
 #dashboard
 {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    align-content: stretch;
 }
 
 #sideBar
@@ -43,11 +49,13 @@ body
 {
     margin: auto;
     text-align: center;
-    font-size: 300%;
+/*    font-size: 300%;*/
+    font-size: 4vw;
 }
 
 #skills
 { 
+/*    max-height: 100%;*/
     width: 32%;
 }
 
@@ -60,7 +68,8 @@ body
 
 .skillBlock
 {
-    font-size: 180%;
+/*    font-size: 180%;*/
+    font-size: 2vw;
     margin: 5px 0px;
     text-align: center;
     width: 50%;
@@ -69,57 +78,45 @@ body
 
 .num
 {
-    font-size: 220%;
+    font-size: 3.7vw;
 }
 
 #armour
 {
     width: 32%; 
+    height: 100%;
 }
 
 #armourView
 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    align-items: stretch;
 }
 
 #armourList
 {
     text-align: center;
     font-size: 220%;
-    width: 30%;
+    width: 35%;
 }
 
 .armourBlock1
 {
-    margin-top: 25px;
-}
-
-.armourBlock2
-{
-    margin-top: 10px;
-}
-
-.armourBlock3
-{
-    margin-top: 10px
-}
-
-.armourBlock4
-{
-    margin-top: 75px;
+    font-size: 3vw;
 }
 
 .arNum
 {
-    font-size: 140%;
+    font-size: 3.7vw;
 }
 
 img
 {
-    width: 70%;
-    height: 100%;
+    margin-left: 5%;
+    width: 60%;
+    height: 45vw;
 }
 
 #weapons
