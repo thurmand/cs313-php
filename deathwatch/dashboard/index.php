@@ -76,11 +76,11 @@
     <div id="dashboard">
         
         <div id="sideBar">
+            <div class="sideBut" onclick="location='logout.php'">Logout</div>
             <div class="sideTitle">Username:</div>
             <div><?php echo $user[0]['username'];?></div>
             <div class="sideTitle">Character Name:</div>
             <div><?php echo $user[0]['char_name'];?><hr></div>
-            <div class="sideBut" onclick="location='logout.php'">Logout</div>
             <div class="sideBut">Edit</div>
         
         </div>
