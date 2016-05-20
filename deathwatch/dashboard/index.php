@@ -24,6 +24,12 @@
         die(); 
     }
 
+     $stmt = $db->prepare("SELECT username, char_name 
+                            FROM  users
+                            WHERE id = :userID;");
+    $stmt->execute(array(':userID' => $userID));
+    $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
     $stmt = $db->prepare("SELECT * 
                             FROM skills s 
                             JOIN users u 
@@ -68,8 +74,9 @@
         
         <div id="sideBar">
         
-            this is the side bar
-            
+            <?php echo $user[0]['username'] . 
+                '<br>' $user[0]['char_name'];?>
+        
         </div>
     
         <div id="main">
@@ -151,11 +158,12 @@
                 <hr>
                 <div id="weaponList">
                     <?php 
-                        foreach ($db->query('SELECT name, description, damage, penetration
+                        foreach ($db->query(
+                        foreach ($db->query("SELECT name, description, damage, penetration
                                                 FROM weapons w
                                                 JOIN users_weapons uW
                                                 ON w.id = uW.weapon_id
-                                                WHERE uW.user_id = :userID;')as $row){
+                                                WHERE uW.user_id = '$userID'")as $row){
                         echo '<div class="weaponBlock">
                                 <div>' . $row['name'] . '</div>
                                 <div>'. $row['description'] . '</div>
