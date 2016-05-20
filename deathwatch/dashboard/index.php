@@ -151,7 +151,11 @@
                 <hr>
                 <div id="weaponList">
                     <?php 
-                        foreach ($db->query('SELECT * FROM movie')as $row){
+                        foreach ($db->query('SELECT name, description, damage, penetration
+                                                FROM weapons w
+                                                JOIN users_weapons uW
+                                                ON w.id = uW.weapon_id
+                                                WHERE uW.user_id = :userID;')as $row){
                         echo '<div class="weaponBlock">
                                 <div>' . $row['name'] . '</div>
                                 <div>'. $row['description'] . '</div>
