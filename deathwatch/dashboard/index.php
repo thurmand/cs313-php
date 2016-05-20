@@ -28,9 +28,17 @@
                             FROM skills s 
                             JOIN users u 
                             ON s.id = u.skill_id
-                            WHERE u.id = :username;");
-    $stmt->execute(array(':username' => $username));
+                            WHERE u.id = :userID;");
+    $stmt->execute(array(':userID' => $userID));
     $stats = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $stmt = $db->prepare("SELECT name, head, arms, legs, body
+                            FROM armor a
+                            JOIN users_armor uA
+                            ON a.id = uA.armor_id
+                            WHERE uA.user_id = :userID;");
+    $stmt->execute(array(':userID' => $userID));
+    $armour = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -102,27 +110,27 @@
             <div id="armour">
                 <div class="title">Armour</div>
                 <hr>
-                <div id="armourViewTitle">Astartes Power Armor<?php ?></div>
+                <div id="armourViewTitle"><?php echo $armour[0]['name'];?></div>
                 <div id="armourView">
                     <div id="armourList">
                         <div class="armourBlock">
                             Head
-                            <div class="arNum">8 (8)</div>
+                            <div class="arNum"><?php echo $armour[0]['head'];?> (8)</div>
                         </div>
                         <hr>
                         <div class="armourBlock">
                             Body
-                            <div class="arNum">10 (8)</div>
+                            <div class="arNum"><?php echo $armour[0]['body'];?> (8)</div>
                         </div>
                         <hr>
                         <div class="armourBlock">
                             Arms
-                            <div class="arNum">8 (8)</div>
+                            <div class="arNum"><?php echo $armour[0]['arms'];?> (8)</div>
                         </div>
                         <hr>
                         <div class="armourBlock">
                             Legs
-                            <div class="arNum">8 (8)</div>
+                            <div class="arNum"><?php echo $armour[0]['legs'];?> (8)</div>
                         </div>
                     </div>
                     <img src="/images/Mark-7-Power-Armour-Half.png">
