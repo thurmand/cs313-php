@@ -27,6 +27,13 @@
     background-color: dimgray;
 }
 
+#sL
+{
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    font-size: 2.5vw;
+}
+
 body
 {
     max-width: 970px;
