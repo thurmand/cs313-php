@@ -31,7 +31,7 @@ else{
 
     $line = "<div class='item'>$pasTime </div><div class='item'>" 
         . implode(', ', $season) 
-        . "</div><div class='item'>$tbColor</div><div class='item'>$date</div>\n";
+        . "</div><div class='item'>" . htmlspecialchars($tbColor) . "</div><div class='item'>$date</div>\n";
 
     echo("$line");
 
