@@ -3,7 +3,7 @@
     
     //if session is not set redirect
     if(!isset($_SESSION['userID'])){
-        header('Location: /deathwatch/index.html')
+        header('Location: /deathwatch/index.html');
     }
     else{
         $userID = $_SESSION['userID'];
@@ -62,39 +62,39 @@
                 <div id="skillList">
                     <div class="skillBlock">
                         Weapon Skill
-                        <div class="num"><?PHP echo $stats[0]['weapon']?></div>
+                        <div class="num"><?PHP echo $stats[0]['weapon'];?></div>
                     </div>
                     <div class="skillBlock">
                         Ballistic Skill
-                        <div class="num"><?PHP echo $stats[0]['ballistic']?></div>
+                        <div class="num"><?PHP echo $stats[0]['ballistic'];?></div>
                     </div>
                     <div class="skillBlock">
                         Strength
-                        <div class="num"><?PHP echo $stats[0]['strength']?></div>
+                        <div class="num"><?PHP echo $stats[0]['strength'];?></div>
                     </div>
                     <div class="skillBlock">
                         Toughness
-                        <div class="num"><?PHP echo $stats[0]['toughness']?></div>
+                        <div class="num"><?PHP echo $stats[0]['toughness'];?></div>
                     </div>
                     <div class="skillBlock">
                         Agility
-                        <div class="num"><?PHP echo $stats[0]['agility']?></div>
+                        <div class="num"><?PHP echo $stats[0]['agility'];?></div>
                     </div>
                     <div class="skillBlock">
                         Intelligence
-                        <div class="num"><?PHP echo $stats[0]['intelligence']?></div>
+                        <div class="num"><?PHP echo $stats[0]['intelligence'];?></div>
                     </div>
                     <div class="skillBlock">
                         Preception
-                        <div class="num"><?PHP echo $stats[0]['preception']?></div>
+                        <div class="num"><?PHP echo $stats[0]['preception'];?></div>
                     </div>
                     <div class="skillBlock">
                         Will Power
-                        <div class="num"><?PHP echo $stats[0]['will_power']?></div>
+                        <div class="num"><?PHP echo $stats[0]['will_power'];?></div>
                     </div>
                     <div class="skillBlock">
                         Fellowship
-                        <div class="num"><?PHP echo $stats[0]['fellowship']?></div>
+                        <div class="num"><?PHP echo $stats[0]['fellowship'];?></div>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
             <div id="armour">
                 <div class="title">Armour</div>
                 <hr>
-                <div id="armourViewTitle">Astartes Power Armor<?php name of power armour?></div>
+                <div id="armourViewTitle">Astartes Power Armor<?php ?></div>
                 <div id="armourView">
                     <div id="armourList">
                         <div class="armourBlock">
