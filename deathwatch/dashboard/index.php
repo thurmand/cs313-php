@@ -2,7 +2,7 @@
     session_start();
     
     //if session is not set redirect
-    if(!isset($_SESSION['userID'])){
+    if($_SESSION['userID'] == null || $_SESSION['userID'] == ''){
         header('Location: /deathwatch/index.html');
     }
     else{
@@ -75,7 +75,8 @@
         <div id="sideBar">
         
             <?php echo $user[0]['username'] . 
-                '<br>' $user[0]['char_name'];?>
+                '<br>' . $user[0]['char_name'];?>
+            <div id="logout" onclick="location='logout.php'">Logout</div>
         
         </div>
     
@@ -158,7 +159,6 @@
                 <hr>
                 <div id="weaponList">
                     <?php 
-                        foreach ($db->query(
                         foreach ($db->query("SELECT name, description, damage, penetration
                                                 FROM weapons w
                                                 JOIN users_weapons uW

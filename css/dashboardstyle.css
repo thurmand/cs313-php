@@ -22,10 +22,17 @@ body
 
 #sideBar
 {
-/*    height: 500px;*/
+    font-size: 2.7vw;
     background-color: darkgray;
     width: 15%;
-    
+    display: flex;
+    flex-direction: column;
+}
+
+#logout:hover
+{
+    cursor: pointer;
+    background-color: black;
 }
 
 #main
