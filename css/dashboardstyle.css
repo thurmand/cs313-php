@@ -22,6 +22,8 @@ body
 
 #sideBar
 {
+    padding-left: 5px;
+    padding-right: 5px;
     font-size: 2.7vw;
     background-color: darkgray;
     width: 15%;
@@ -34,7 +36,7 @@ body
     font-size: 1.5vw;
 }
 
-#logout:hover
+.sideBut:hover
 {
     cursor: pointer;
     background-color: black;
