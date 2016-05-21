@@ -118,7 +118,7 @@ body
 {
     text-align: center;
 /*    font-size: 220%;*/
-    width: 35%;
+    width: 45%;
 }
 
 .armourBlock
@@ -134,7 +134,6 @@ body
 
 img
 {
-    margin-left: 10%;
     width: 55%;
     height: 40vw;
 }
