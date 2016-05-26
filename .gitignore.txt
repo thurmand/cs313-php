@@ -1,0 +1,3 @@
+/temp.html
+/in-class/*
+/hello.php
