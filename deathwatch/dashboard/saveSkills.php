@@ -38,5 +38,5 @@
                         ':a' => $ag, ':i' => $in, ':p' => $pr,
                         ':wp' => $wp, ':f' => $fe));
 
-    header('Location: index.html');
+    header('Location: index.php');
 ?>
