@@ -121,7 +121,7 @@
                         Strength
                         <div class="numOpr">
                             <div class="num">
-                                65<?PHP echo $stats[0]['strength'];?></div>
+                                <?PHP echo $stats[0]['strength'];?></div>
                             <div class="operator">
                                 <div class="sEB" onclick="addToSkill(3,true)">+</div>
                                 <div class="sEB" onclick="addToSkill(3,false)">-</div>
