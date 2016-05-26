@@ -202,20 +202,29 @@ img
     cursor: pointer;
 }
 
-#saveSkills
+#skillButs
 {
-    background-color: black;
-    opacity: .6;
-    border-radius: 15px;
-    text-align: center;
-    width: 23%;
+    width: 33%;
     margin: auto;
     margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.saveSkills
+{
+    margin:0px 4px;
+    background-color: black;
+    opacity: .6;
+    width: 50%;
+    border-radius: 15px;
+    text-align: center;
     font-size: 2.7vw;
     display: none;
 }
 
-#saveSkills:hover
+.saveSkills:hover
 {
     cursor: pointer;
     opacity: 1;
