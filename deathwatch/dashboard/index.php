@@ -81,8 +81,13 @@
             <div><?php echo $user[0]['username'];?></div>
             <div class="sideTitle">Character Name:</div>
             <div><?php echo $user[0]['char_name'];?><hr></div>
-            <div class="sideBut">Edit</div>
-        
+            <div id="editB" class="sideBut">Edit</div>
+            <div id="edAbles">
+                <div onclick="editBSkills(1)" class="sideBut">Basic Skills</div>
+                <div id="" class="sideBut">Armour</div>
+                <div id="" class="sideBut">Weapons</div>
+            </div>
+                
         </div>
     
         <div id="main">
@@ -92,51 +97,120 @@
                 <div id="skillList">
                     <div class="skillBlock">
                         Weapon Skill
-                        <div class="num">
-                            <?PHP echo $stats[0]['weapon'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['weapon'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(1,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(1,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Ballistic Skill
-                        <div class="num">
-                            <?PHP echo $stats[0]['ballistic'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['ballistic'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(2,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(2,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Strength
-                        <div class="num">
-                            <?PHP echo $stats[0]['strength'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                65<?PHP echo $stats[0]['strength'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(3,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(3,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Toughness
-                        <div class="num">
-                            <?PHP echo $stats[0]['toughness'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['toughness'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(4,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(4,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Agility
-                        <div class="num">
-                            <?PHP echo $stats[0]['agility'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['agility'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(5,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(5,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Intelligence
-                        <div class="num">
-                            <?PHP echo $stats[0]['intelligence'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['intelligence'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(6,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(6,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Preception
-                        <div class="num"
-                             ><?PHP echo $stats[0]['preception'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['preception'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(7,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(7,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Will Power
-                        <div class="num">
-                            <?PHP echo $stats[0]['will_power'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['will_power'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(8,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(8,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="skillBlock">
                         Fellowship
-                        <div class="num">
-                            <?PHP echo $stats[0]['fellowship'];?></div>
+                        <div class="numOpr">
+                            <div class="num">
+                                <?PHP echo $stats[0]['fellowship'];?></div>
+                            <div class="operator">
+                                <div class="sEB" onclick="addToSkill(9,true)">+</div>
+                                <div class="sEB" onclick="addToSkill(9,false)">-</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <div id="saveSkills" onclick="editBSkills(0)">
+                   Save
+                </div>
+                <form id="skillsForm" method="post" action="saveSkills.php">
+                    <input class="sInput" type="number" name="ws">
+                    <input class="sInput" type="number" name="bs">
+                    <input class="sInput" type="number" name="s">
+                    <input class="sInput" type="number" name="t">
+                    <input class="sInput" type="number" name="a">
+                    <input class="sInput" type="number" name="i">
+                    <input class="sInput" type="number" name="p">
+                    <input class="sInput" type="number" name="wp">
+                    <input class="sInput" type="number" name="f">
+                </form>
             </div>
+            
             <div class="divider"></div>
             <div id="armour">
                 <div class="title">Armour</div>

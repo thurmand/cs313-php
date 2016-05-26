@@ -45,6 +45,7 @@ body
 #main
 {
 /*    height: 500px;*/
+    overflow: hidden;
     width: 85%;
     display: flex;
     flex-direction: row;
@@ -91,6 +92,7 @@ body
 .num
 {
     font-size: 3.7vw;
+    width: 70%
 }
 
 #armour
@@ -157,6 +159,71 @@ img
 .weaponBlock
 {
     font-size: 1.7vw;
+}
+
+#edAbles
+{
+    height: 0px;
+    overflow-y: hidden;
+    padding-left: 60px;
+    font-size: 1.7vw;
+}
+
+.operator
+{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.sEB
+{
+    margin: auto;
+    background-color: #151414;
+    opacity: .6;  
+    width: 100%;
+    display: none;
+}
+
+.numOpr
+{
+    margin: auto;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.sEB:hover
+{
+    opacity: 1;
+    cursor: pointer;
+}
+
+#saveSkills
+{
+    background-color: black;
+    opacity: .6;
+    border-radius: 15px;
+    text-align: center;
+    width: 23%;
+    margin: auto;
+    margin-top: 1%;
+    font-size: 2.7vw;
+    display: none;
+}
+
+#saveSkills:hover
+{
+    cursor: pointer;
+    opacity: 1;
+}
+
+form
+{
+    display: none;
 }
 
 @media (max-width: 720px)
