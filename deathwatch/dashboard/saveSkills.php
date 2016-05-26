@@ -36,6 +36,7 @@
     $stmt->execute(array(':userID' => $userID, ':ws' => $ws,
                         ':bs' => $bs, ':s' => $st, ':t' => $to,
                         ':a' => $ag, ':i' => $in, ':p' => $pr,
-                        ':wp' =? $wp, ':f' => $fe));
+                        ':wp' => $wp, ':f' => $fe));
 
+    header('Location: index.html');
 ?>

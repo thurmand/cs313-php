@@ -96,5 +96,4 @@ function saveBSkills(){
     }
 
     document.getElementById("skillsForm").submit()
-    location.reload();
 }
