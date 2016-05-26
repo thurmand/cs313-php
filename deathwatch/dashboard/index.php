@@ -81,7 +81,7 @@
             <div><?php echo $user[0]['username'];?></div>
             <div class="sideTitle">Character Name:</div>
             <div><?php echo $user[0]['char_name'];?><hr></div>
-            <div id="editB" class="sideBut">Edit</div>
+            <div id="editB" onclick="editMenuShow()" class="sideBut">Edit</div>
             <div id="edAbles">
                 <div onclick="editBSkills(1)" class="sideBut">Basic Skills</div>
                 <div id="" class="sideBut">Armour</div>
