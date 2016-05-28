@@ -17,8 +17,8 @@ $db = connectToDb();*/
        die(); 
     }
 
-$username = ['uN'];
-$pass = $_POST['ps'];
+$username = $_POST['username'];
+$pass = $_POST['pass'];
 
 $stmt = $db->prepare("INSERT INTO users (username, password) 
                         VALUES (:username, :pass);");

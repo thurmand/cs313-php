@@ -28,7 +28,7 @@ function submitRegForm(){
         checkMatch = true;
     }
     
-    if(warn4.style.display == 'display'){
+    if(warn4.style.display == 'block'){
         checkAvailable = true;
     }
     else{
@@ -37,8 +37,8 @@ function submitRegForm(){
     
     console.log(checkAvailable, checkMatch, checkMissing)
     if( checkAvailable && checkMatch && checkMissing){
-        console.log("registering")
-//        document.getElementById("registerForm").submit();
+//        console.log("registering")
+        document.getElementById("registerForm").submit();
     } 
 }
 
