@@ -23,7 +23,12 @@
                     Username: <br>
                     <input id="uN" type="text" onchange="checkUserName(this.value)" name="username">
                 </div>
-
+                
+                <div>
+                    <span class="warn" id="warn3">Username Already In Use</span>
+                    <span class="warn" id="warn4">Username Is Available</span>
+                </div>
+                
                 <div>
                     Password: <br>
 
@@ -37,7 +42,6 @@
                 <div>
                     <span class="warn" id="warn1">Missing information</span>
                     <span class="warn" id="warn2">Passwords Do Not Match</span>
-                    <span class="warn" id="warn3">Username Already In Use</span
                 </div>
             </form>
             <button onclick="submitRegForm()">Create</button>

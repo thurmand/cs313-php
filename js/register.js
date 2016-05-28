@@ -20,24 +20,26 @@ function submitRegForm(){
 function checkUserName(value){
     var xhttp = new XMLHttpRequest();
     var url = "checkUser.php?username=" + value
-    var text
+    var text = ""
     var warn3 = document.getElementById("warn3")
+    var warn4 = document.getElementById("warn4")
+    warn4.style.color = 'green'
     
         xhttp.onreadystatechange = function()
         {
             if (xhttp.readyState == 4) {                
-                text = xhttp.responseText                
+                text = xhttp.responseText 
+                
+                if(text == true){
+                        warn3.style.display = 'block'
+                        warn4.style.display = 'none'
+                    }
+                    else{
+                        warn3.style.display = 'none'
+                        warn4.style.display = 'block'
+                    }
             }   
         }
         xhttp.open("GET", url, true);
         xhttp.send();
-    
-    
-    if(text == true){
-        warn3.style.display = 'block'
-    }
-    else{
-        warn3.style.display = 'none'
-    }
-    
 }
