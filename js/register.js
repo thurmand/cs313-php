@@ -5,15 +5,25 @@ function submitRegForm(){
     var warn1 = document.getElementById("warn1")
     var warn2 = document.getElementById("warn2")
     var warn3 = document.getElementById("warn3")
+    var warn4 = document.getElementById("warn4")
     
      if(username == "" || pass == ""){
         warn1.style.display = 'block'
     }
-    else if(pass != cPass){
+    else{
+        warn1.style.display = 'none'
+    }
+    
+    if(pass != cPass){
         warn2.style.display = 'block'
     }
     else{
-        document.getElementById("registerForm").submit();
+        warn2.style.display = 'none'
+    }
+    
+    if(warn4.style.display == 'display'){
+        console.log("registering")
+//        document.getElementById("registerForm").submit();
     } 
 }
 
