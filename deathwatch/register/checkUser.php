@@ -1,0 +1,21 @@
+<?php
+require("/deathwatch/dbConnect.php");
+$db = connectToDb();
+
+$username = htmlspecialchars($_GET['username']);
+echo $username;
+$stmt = $db->prepare("SELECT username 
+                        FROM  users
+                        WHERE username = :username;");
+    $stmt->execute(array(':username' => $username));
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if(sizeof($result) == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+?>

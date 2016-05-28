@@ -13,7 +13,7 @@ function submitRegForm(){
         warn2.style.display = 'block'
     }
     else{
-        document.getElementById("dwform").submit();
+        document.getElementById("registerForm").submit();
     }
     
     
@@ -21,7 +21,7 @@ function submitRegForm(){
 
 function checkUserName(value){
     var xhttp = new XMLHttpRequest();
-    var url = "register.php?username=" + value
+    var url = "checkUser.php?username=" + value
     
     
         xhttp.onreadystatechange = function()
@@ -33,9 +33,7 @@ function checkUserName(value){
                             + " Status " + xhttp.status)
                 
                 var text = xhttp.responseText
-                console.log(text)
-            
-                
+                console.log(text)                
             }   
         }
         xhttp.open("GET", url, true);
