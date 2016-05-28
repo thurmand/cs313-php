@@ -17,7 +17,6 @@ $db = connectToDb();*/
     }
 
 $username = htmlspecialchars($_GET['username']);
-echo $username;
 $stmt = $db->prepare("SELECT username 
                         FROM  users
                         WHERE username = :username;");
@@ -26,10 +25,10 @@ $stmt = $db->prepare("SELECT username
 
     if(sizeof($result) == 0)
     {
-        return false;
+        echo false;
     }
     else
     {
-        return true;
+        echo true;
     }
 ?>
