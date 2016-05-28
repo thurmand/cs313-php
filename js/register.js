@@ -30,7 +30,7 @@ function checkUserName(value){
             if (xhttp.readyState == 4) {                
                 text = xhttp.responseText 
                 
-                if(text == true){
+                if(text == 'true'){
                         warn3.style.display = 'block'
                         warn4.style.display = 'none'
                     }
