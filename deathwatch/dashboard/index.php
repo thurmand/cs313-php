@@ -183,8 +183,9 @@
                         </div>
                     </div>
                 </div>
-                <div id="saveSkills" onclick="editBSkills(0)">
-                   Save
+                <div id="skillButs">
+                    <div class="saveSkills" onclick="editBSkills(0)">Save</div>
+                    <div class="saveSkills" onclick="editBSkills(2)">Cancel</div>
                 </div>
                 <form id="skillsForm" method="post" action="saveSkills.php">
                     <input class="sInput" type="number" name="ws">

@@ -32,7 +32,7 @@ function editBSkills(){
     var divider = document.getElementsByClassName("divider")
     var sEB = document.getElementsByClassName("sEB")
     var sBlock = document.getElementsByClassName("skillBlock")
-    var button = document.getElementById("saveSkills")
+    var buttons = document.getElementsByClassName("saveSkills")
     
     if(arguments[0] == 1){
        
@@ -52,7 +52,10 @@ function editBSkills(){
                 sEB[i].style.display = "block"
         }
         
-        button.style.display = "block"
+        for(var i=0;i<buttons.length;i++){
+                buttons[i].style.display = "block"
+        }
+        
         
     }else{
         
@@ -72,8 +75,16 @@ function editBSkills(){
                 sEB[i].style.display = "none"
         }
         
-        button.style.display = "none"
-        saveBSkills()
+        for(var i=0;i<buttons.length;i++){
+                buttons[i].style.display = "block"
+        }
+        
+        if(arguments[0]==0){
+            saveBSkills()
+        }
+        /*else{
+            location.reload();
+        }*/
     }
 }
 
