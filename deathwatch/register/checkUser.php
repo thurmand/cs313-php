@@ -25,10 +25,10 @@ $stmt = $db->prepare("SELECT username
 
     if(sizeof($result) == 0)
     {
-        echo false;
+        echo 'false';
     }
     else
     {
-        echo true;
+        echo 'true';
     }
 ?>
