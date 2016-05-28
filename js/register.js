@@ -20,20 +20,24 @@ function submitRegForm(){
 function checkUserName(value){
     var xhttp = new XMLHttpRequest();
     var url = "checkUser.php?username=" + value
-    
+    var text
+    var warn3 = document.getElementById("warn3")
     
         xhttp.onreadystatechange = function()
         {
-            
-            if (xhttp.readyState == 4) {
-                // print readystat and status
-                console.log("Readystate " + xhttp.readyState 
-                            + " Status " + xhttp.status)
-                
-                var text = xhttp.responseText
-                console.log(text)                
+            if (xhttp.readyState == 4) {                
+                text = xhttp.responseText                
             }   
         }
         xhttp.open("GET", url, true);
         xhttp.send();
+    
+    
+    if(text == true){
+        warn3.style.display = 'block'
+    }
+    else{
+        warn3.style.display = 'none'
+    }
+    
 }
