@@ -14,9 +14,7 @@ function submitRegForm(){
     }
     else{
         document.getElementById("registerForm").submit();
-    }
-    
-    
+    } 
 }
 
 function checkUserName(value){
