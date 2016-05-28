@@ -47,7 +47,7 @@ input
     color: white;
 }
 
-#warn
+.warn
 {
     padding-top: 10px;
     color: red;
@@ -66,4 +66,17 @@ button
 button:hover
 {
     background-color: #333333;
+}
+
+a
+{
+    color: lavenderblush;
+    margin-right: 30px;
+    float: right;
+    font-size: 50%;
+}
+
+a:hover
+{
+    color: lavenderblush;
 }

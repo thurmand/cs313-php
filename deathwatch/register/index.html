@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login</title>
+        <title>Register</title>
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="/css/dwLoginstyle.css">
         <link href='https://fonts.googleapis.com/css?family=Cinzel' rel='stylesheet' type='text/css'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
-        <script src="/js/dwLogin.js"></script>
+        <script src="/js/register.js"></script>
     </head>
 
-<body onload="setup()" id="body">
+<body>
     <div id="content">
         <header>
             <img src="/images/deathwatch-logo.png">
         </header>
 
         <main>
-            <form id="dwform" action="dwLogin.php" method="post">
-
+            <form id="registerForm" action="register.php" method="post">
+                Create An Account
+                <br>
                 <div>
                     Username: <br>
-                    <input id="uN" type="text" name="username">
+                    <input id="uN" type="text" onchange="checkUserName(this.value)" name="username">
                 </div>
 
                 <div>
@@ -30,12 +31,19 @@
                     <input id="ps" type="password" name="pass">
                 </div>
                 <div>
-                    <span class="warn" id="warn1">Username and Password is missing</span>
+                    Confrim Password: <br>
+
+                    <input id="cps" type="password">
+                </div>
+                <div>
+                    <span class="warn" id="warn1">Missing information</span>
+                    <span class="warn" id="warn2">Passwords Do Not Match</span>
+                    <span class="warn" id="warn3">Username Already In Use</span
                 </div>
             </form>
-            <button onclick="submitForm()">enter</button>
+            <button onclick="submitRegForm()">Create</button>
             <br>
-            <a href="register/">Register</a>
+                    <a href="/deathwatch/">Cancel</a>
         </main>
 
         <footer>
