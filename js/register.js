@@ -6,22 +6,37 @@ function submitRegForm(){
     var warn2 = document.getElementById("warn2")
     var warn3 = document.getElementById("warn3")
     var warn4 = document.getElementById("warn4")
+    var checkMissing = false;
+    var checkMatch = false;
+    var checkAvailable = false;
     
      if(username == "" || pass == ""){
         warn1.style.display = 'block'
+        checkMissing = false;
     }
     else{
         warn1.style.display = 'none'
+        checkMissing = true;
     }
     
     if(pass != cPass){
         warn2.style.display = 'block'
+        checkMatch = false;
     }
     else{
         warn2.style.display = 'none'
+        checkMatch = true;
     }
     
     if(warn4.style.display == 'display'){
+        checkAvailable = true;
+    }
+    else{
+        checkAvailable = false;
+    }
+    
+    console.log(checkAvailable, checkMatch, checkMissing)
+    if( checkAvailable && checkMatch && checkMissing){
         console.log("registering")
 //        document.getElementById("registerForm").submit();
     } 
