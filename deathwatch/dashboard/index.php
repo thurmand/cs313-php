@@ -34,10 +34,8 @@
     $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     $stmt = $db->prepare("SELECT * 
-                            FROM skills s 
-                            JOIN users u 
-                            ON s.id = u.skill_id
-                            WHERE u.id = :userID;");
+                            FROM skills 
+                            WHERE user_id = :userID;");
     $stmt->execute(array(':userID' => $userID));
     $stats = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

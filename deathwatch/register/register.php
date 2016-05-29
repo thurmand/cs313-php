@@ -17,12 +17,15 @@ $db = connectToDb();*/
        die(); 
     }
 
-$username = $_POST['username'];
-$pass = $_POST['pass'];
+$username = htmlspecialchars($_POST['username']);
+$pass = htmlspecialchars($_POST['pass']);
 
-$stmt = $db->prepare("INSERT INTO users (username, password) 
-                        VALUES (:username, :pass);");
+$stmt = $db->prepare("INSERT INTO users (username, password, skill_id) VALUES (:username, :pass);");
     $stmt->execute(array(':username' => $username, ':pass' => $pass));
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+$stmt = $db->prepare("INSERT INTO skills(user_id) VALUES ((SELECT id FROM users WHERE username=:username))");
+    $stmt->execute(array(':username' => $username));
+
 header("location: /deathwatch/index.html");
 ?>
