@@ -21,11 +21,14 @@ $username = htmlspecialchars($_POST['username']);
 $pass = htmlspecialchars($_POST['pass']);
 
 try{
-$stmt = $db->prepare("INSERT INTO users (username, password) VALUES (:username, :pass);");
-    $stmt->execute(array(':username' => $username, ':pass' => $pass));
+    $stmt = $db->prepare("INSERT INTO users (username, password) VALUES (:username, :pass);");
+        $stmt->execute(array(':username' => $username, ':pass' => $pass));
 
-$stmt = $db->prepare("INSERT INTO skills(user_id) VALUES ((SELECT id FROM users WHERE username=:username))");
-    $stmt->execute(array(':username' => $username));
+    $stmt = $db->prepare("INSERT INTO skills(user_id) VALUES ((SELECT id FROM users WHERE username=:username))");
+        $stmt->execute(array(':username' => $username));
+
+    $stmt = $db->prepare("INSERT INTO users_armor(user_id) VALUES ((SELECT id FROM users WHERE username=:username))");
+        $stmt->execute(array(':username' => $username));
 }
 catch(PDOExeption $ex)
 {
