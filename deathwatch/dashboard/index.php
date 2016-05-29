@@ -85,8 +85,8 @@
             <div id="editB" onclick="editMenuShow()" class="sideBut">Edit</div>
             <div id="edAbles">
                 <div onclick="editBSkills(1)" class="sideBut">Basic Skills</div>
-                <div id="" class="sideBut">Armour</div>
-                <div id="" class="sideBut">Weapons</div>
+                <div onclick="" class="sideBut">Armour</div>
+                <div onclick="" class="sideBut">Weapons</div>
             </div>
                 
         </div>
