@@ -108,3 +108,41 @@ function saveBSkills(){
 
     document.getElementById("skillsForm").submit()
 }
+
+function editWeaons(){
+    
+     var skills = document.getElementById("skills")
+    var armour = document.getElementById("armour")
+    var weapons = document.getElementById("weapons")
+    var divider = document.getElementsByClassName("divider")
+    
+    if(arguments[0] == 1){
+       
+        for(var i=0;i<divider.length;i++){
+                divider[i].style.display = "none"
+        }
+
+        armour.style.display = "none"
+        weapons.style.width = "100%"
+        skills.style.display = "none"
+        
+        
+        
+    }else{
+        
+        for(var i=0;i<divider.length;i++){
+                divider[i].style.display = "block"
+        }
+
+        armour.style.display = "block"
+        weapons.style.width = "32%"
+        skills.style.display = "block"
+        
+        
+        if(arguments[0]==0){
+            saveBSkills()
+        }
+        /*else{
+            location.reload();
+        }*/
+}
