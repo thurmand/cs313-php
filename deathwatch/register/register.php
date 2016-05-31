@@ -1,5 +1,5 @@
 <?php
-require'/password.php';
+require("/password.php");
 
 /*require '/deathwatch/dbConnect.php';
 $db = connectToDb();*/
