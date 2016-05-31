@@ -1,11 +1,12 @@
 <?php
-//require("/deathwatch/dbConnect.php");
+require("dbConnect.php");
+require("password.php");
 session_start();
 
 $username = htmlspecialchars($_POST['username']);
 $p = htmlspecialchars($_POST['pass']);
 
-if(!isset($username) || !isset($p)){
+/*if(!isset($username) || !isset($p)){
     header('Location: index.html');
 }
 
@@ -21,7 +22,9 @@ if(!isset($username) || !isset($p)){
     {
        echo 'Error!: ' . $ex->getMessage();
        die(); 
-    }
+    }*/
+
+$db = connectToDb();
 
 $stmt = $db->prepare("SELECT id FROM users WHERE username=:username AND password=:password");
 $stmt->execute(array(':username' => $username, ':password' => $p));
