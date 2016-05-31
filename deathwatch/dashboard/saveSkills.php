@@ -1,5 +1,6 @@
 <?php 
-    session_start();
+require("../dbConnect.php");
+session_start();
 
     $userID = $_SESSION['userID'];
 
@@ -13,22 +14,7 @@
     $wp = htmlspecialchars($_POST['wp']);
     $fe = htmlspecialchars($_POST['f']);
 
-
-
-    $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
-    $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
-    $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
-    $dbPassword = getenv('OPENSHIFT_MYSQL_DB_PASSWORD');
-    $dbName = 'death_watch';
-
-    try{
-    $db = new PDO("mysql:host=$dbHost:$dbPort;dbname=$dbName", $dbUser, $dbPassword);
-    }
-    catch(PDOException $ex) 
-    {  
-        echo 'Error!: ' . $ex->getMessage();
-        die(); 
-    }
+    $db = connectToDb();
 
     $stmt = $db->prepare("UPDATE skills
                         SET weapon=:ws, ballistic=:bs, strength=:s, toughness=:t, agility=:a, intelligence=:i, preception=:p, will_power=:wp, fellowship=:f 

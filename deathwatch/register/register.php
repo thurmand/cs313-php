@@ -1,10 +1,9 @@
 <?php
 require("../password.php");
+require ("../dbConnect.php");
+$db = connectToDb();
 
-/*require '/deathwatch/dbConnect.php';
-$db = connectToDb();*/
-
- try{
+ /*try{
         $dbHost = getenv('OPENSHIFT_MYSQL_DB_HOST');
         $dbPort = getenv('OPENSHIFT_MYSQL_DB_PORT');
         $dbUser = getenv('OPENSHIFT_MYSQL_DB_USERNAME');
@@ -16,7 +15,7 @@ $db = connectToDb();*/
     {
        echo 'Error!: ' . $ex->getMessage();
        die(); 
-    }
+    }*/
 
 $username = htmlspecialchars($_POST['username']);
 $pass = htmlspecialchars($_POST['pass']);
