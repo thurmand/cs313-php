@@ -27,13 +27,24 @@ $stmt = $db->prepare("SELECT id FROM users WHERE username=:username AND password
 $stmt->execute(array(':username' => $username, ':password' => $p));
 $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-if(sizeof($userID) == 1){
+
+if (password_verify($p, $userID[0]['password'])) {
+    // Correct Password
+    $_SESSION['userID'] = $userID[0]['id'];
+    header('Location: /deathwatch/dashboard/index.php');
+} else {
+    // Wrong password
+    header('Location: index.html');
+}
+
+
+/*if(sizeof($userID) == 1){
     $_SESSION['userID'] = $userID[0]['id'];
     header('Location: /deathwatch/dashboard/index.php');
 }
 else
 {
     header('Location: index.html');
-}
+}*/
 
 ?>

@@ -1,4 +1,5 @@
 <?php
+require'/password.php';
 
 /*require '/deathwatch/dbConnect.php';
 $db = connectToDb();*/
@@ -20,9 +21,11 @@ $db = connectToDb();*/
 $username = htmlspecialchars($_POST['username']);
 $pass = htmlspecialchars($_POST['pass']);
 
+$passwordHash = password_hash($pass, PASSWORD_DEFAULT);
+
 try{
     $stmt = $db->prepare("INSERT INTO users (username, password) VALUES (:username, :pass);");
-        $stmt->execute(array(':username' => $username, ':pass' => $pass));
+        $stmt->execute(array(':username' => $username, ':pass' => $passwordHash));
 
     $stmt = $db->prepare("INSERT INTO skills(user_id) VALUES ((SELECT id FROM users WHERE username=:username))");
         $stmt->execute(array(':username' => $username));
