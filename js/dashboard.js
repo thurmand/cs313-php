@@ -76,12 +76,13 @@ function editBSkills(){
         }
         
         for(var i=0;i<buttons.length;i++){
-                buttons[i].style.display = "block"
+                buttons[i].style.display = "none"
         }
         
         if(arguments[0]==0){
             saveBSkills()
         }
+        
         /*else{
             location.reload();
         }*/
