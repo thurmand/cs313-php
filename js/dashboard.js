@@ -145,4 +145,5 @@ function editWeaons(){
         /*else{
             location.reload();
         }*/
+    }
 }
