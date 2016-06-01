@@ -18,6 +18,10 @@
     $stmt->execute(array(':userID' => $userID));
     $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    if($user[0]['char_name'] == null || $user[0]['char_name'] == ''){
+        $user[0]['char_name'] = 'NAME';
+    }
+
     $stmt = $db->prepare("SELECT * 
                             FROM skills 
                             WHERE user_id = :userID;");

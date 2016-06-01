@@ -11,6 +11,8 @@ function setup(){
     skillInputs = document.getElementsByClassName("sInput")
     document.getElementById('canName').style.display = "none"
     
+    preCharName = document.getElementById("cName").innerText
+    
   /*  if(document.getElementById("cName") == 'NAME'){
         editName()
     }*/
@@ -30,10 +32,9 @@ function editMenuShow(){
 }
 
 function editName(){
-    console.log("clicked")
-    var parent = document.getElementById("cName")
-    console.log(parent.style.color)
    
+    var parent = document.getElementById("cName")
+    
     parent.innerHTML = "<form id='modName' action='charName.php' method='method'><input type='text' placeholder='Change Name' name='cName' autofocus></form>"
     var cancel = document.getElementById('canName')
     cancel.style.display = "block"
@@ -47,9 +48,8 @@ function editName(){
 
 function noNameCh(){
     var parent = document.getElementById("cName")
-    console.log("else")
     
-    parent.innerHTML = "NAME<?=$user[0]['char_name'];?>"
+    parent.innerHTML = preCharName
     parent.style.fontSize = "2.7vw"
     parent.style.color = "cornsilk"
     var cancel = document.getElementById('canName')

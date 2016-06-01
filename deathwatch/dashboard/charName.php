@@ -1,5 +1,5 @@
 <?PHP
-require("../connectDb()");
+require("../dbConnet.php");
 
 session_start();
 
@@ -12,7 +12,9 @@ $db = connectToDb();
 $stmt = $db->prepare("UPDATE users
                         SET char_name=:name 
                         WHERE id =:userID;");
-$stmt->execute(array(':name' => $name, ':userID' => $userID));
+$stmt->bindValue(":userId", $userId, PDO::PARAM_INT);
+$stmt->bindValue(":name", $name, PDO::PARAM_STR);
+$stmt->execute();
 
 header('Location: index.php');
 
