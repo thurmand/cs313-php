@@ -42,6 +42,7 @@ function editName(){
     
     parent.style.fontSize = "1vw"
     parent.style.color = "black"  
+    parent.removeAttribute("onclick")
 }
 
 function noNameCh(){
@@ -51,7 +52,8 @@ function noNameCh(){
     parent.innerHTML = "NAME<?=$user[0]['char_name'];?>"
     parent.style.fontSize = "2.7vw"
     parent.style.color = "cornsilk"
-     var cancel = document.getElementById('canName')
+    var cancel = document.getElementById('canName')
+    parent.setAttribute("onclick", "editName()")
     cancel.style.display = "none"
 }
 
