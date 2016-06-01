@@ -9,6 +9,11 @@ function setup(){
     }
     num = document.getElementsByClassName("num")
     skillInputs = document.getElementsByClassName("sInput")
+    document.getElementById('canName').style.display = "none"
+    
+  /*  if(document.getElementById("cName") == 'NAME'){
+        editName()
+    }*/
 }
 
 function editMenuShow(){
@@ -22,6 +27,32 @@ function editMenuShow(){
         console.log("closing")
         menu.style.height = "0px"
     }
+}
+
+function editName(){
+    console.log("clicked")
+    var parent = document.getElementById("cName")
+    console.log(parent.style.color)
+   
+    parent.innerHTML = "<form id='modName' action='charName.php' method='method'><input type='text' placeholder='Change Name' name='cName' autofocus></form>"
+    var cancel = document.getElementById('canName')
+    cancel.style.display = "block"
+    cancel.style.fontSize = "1vw"
+    cancel.style.color = "cornsilk"
+    
+    parent.style.fontSize = "1vw"
+    parent.style.color = "black"  
+}
+
+function noNameCh(){
+    var parent = document.getElementById("cName")
+    console.log("else")
+    
+    parent.innerHTML = "NAME<?=$user[0]['char_name'];?>"
+    parent.style.fontSize = "2.7vw"
+    parent.style.color = "cornsilk"
+     var cancel = document.getElementById('canName')
+    cancel.style.display = "none"
 }
 
 function editBSkills(){
@@ -110,7 +141,7 @@ function saveBSkills(){
     document.getElementById("skillsForm").submit()
 }
 
-function editWeaons(){
+function editWeapons(){
     
      var skills = document.getElementById("skills")
     var armour = document.getElementById("armour")

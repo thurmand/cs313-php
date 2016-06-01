@@ -212,6 +212,11 @@ img
     flex-wrap: nowrap;
 }
 
+#skillsForm
+{
+    display: none;
+}
+
 .saveSkills
 {
     margin:0px 4px;
@@ -230,9 +235,15 @@ img
     opacity: 1;
 }
 
-form
+#cName:hover
 {
-    display: none;
+     cursor: pointer;
+}
+
+#canName:hover
+{
+    cursor: pointer;
+    background-color: grey;
 }
 
 @media (max-width: 720px)

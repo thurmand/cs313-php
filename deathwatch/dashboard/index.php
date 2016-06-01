@@ -66,12 +66,13 @@
             <div class="sideTitle">Username:</div>
             <div><?php echo $user[0]['username'];?></div>
             <div class="sideTitle">Character Name:</div>
-            <div><?php echo $user[0]['char_name'];?><hr></div>
+            <div id="cName"><?php echo $user[0]['char_name'];?></div>
+            <hr>
             <div id="editB" onclick="editMenuShow()" class="sideBut">Edit</div>
             <div id="edAbles">
                 <div onclick="editBSkills(1)" class="sideBut">Basic Skills</div>
 <!--                <div onclick="" class="sideBut">Armour</div>-->
-                <div onclick="editWepaons(1)" class="sideBut">Weapons</div>
+                <div onclick="editWeapons(1)" class="sideBut">Weapons</div>
             </div>
                 
         </div>
