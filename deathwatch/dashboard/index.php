@@ -66,7 +66,7 @@
             <div class="sideTitle">Username:</div>
             <div><?php echo $user[0]['username'];?></div>
             <div class="sideTitle">Character Name:</div>
-            <div id="cName"><?php echo $user[0]['char_name'];?></div>
+            <div id="cName" onclick="editName()"><?php echo $user[0]['char_name'];?></div>
             <div id='canName' onclick='noNameCh()'>cancel</div>
             <div><hr></div>
             <div id="editB" onclick="editMenuShow()" class="sideBut">Edit</div>
