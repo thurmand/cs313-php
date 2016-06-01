@@ -1,21 +1,27 @@
 <?PHP
-require("../dbConnet.php");
+require("../dbConnect.php");
 
 session_start();
 
 $userID = $_SESSION['userID'];
 
 $name = htmlspecialchars($_POST['cName']);
-echo $name
-$db = connectToDb();
 
+$db = connectToDb();
+$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+echo $name;
+try{
 $stmt = $db->prepare("UPDATE users
-                        SET char_name=:name 
-                        WHERE id =:userID;");
-$stmt->bindValue(":userId", $userId, PDO::PARAM_INT);
+                        SET char_name =:name
+                        WHERE id =:userId;");
+//$stmt->execute(array(':userID' => $userID, ':name' => $name));
+$stmt->bindValue(":userId", $userId);
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->execute();
-
+}
+catch(PDOException $e){
+  echo $e->getMessage();
+}
 //header('Location: index.php');
 
 ?>

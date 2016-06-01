@@ -248,8 +248,14 @@ img
 
 #subName
 {
-    display: "none";
+    display: none;
     font-size: 1vw;
+}
+
+#subName:hover
+{
+     cursor: pointer;
+    background-color: grey;
 }
 
 @media (max-width: 720px)

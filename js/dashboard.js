@@ -35,11 +35,13 @@ function editName(){
    
     var parent = document.getElementById("cName")
     
-    parent.innerHTML = "<form id='modName' action='charName.php' method='method'><input type='text' placeholder='Change Name' name='cName' autofocus></form>"
+    parent.innerHTML = "<form id='modName' action='charName.php' method='POST'><input type='text' placeholder='Change Name' name='cName' autofocus></form>"
     var cancel = document.getElementById('canName')
     cancel.style.display = "block"
     cancel.style.fontSize = "1vw"
     cancel.style.color = "cornsilk"
+    
+    document.getElementById("subName").style.display = "block"
     
     parent.style.fontSize = "1vw"
     parent.style.color = "black"  
@@ -48,6 +50,7 @@ function editName(){
 
 function noNameCh(){
     var parent = document.getElementById("cName")
+    document.getElementById("subName").style.display = "none"
     
     parent.innerHTML = preCharName
     parent.style.fontSize = "2.7vw"
