@@ -57,6 +57,10 @@ function noNameCh(){
     cancel.style.display = "none"
 }
 
+function changeName(){
+    document.getElementById("modName").submit
+}
+
 function editBSkills(){
     
     var skills = document.getElementById("skills")

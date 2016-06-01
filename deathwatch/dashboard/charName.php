@@ -6,7 +6,7 @@ session_start();
 $userID = $_SESSION['userID'];
 
 $name = htmlspecialchars($_POST['cName']);
-
+echo $name
 $db = connectToDb();
 
 $stmt = $db->prepare("UPDATE users
@@ -16,6 +16,6 @@ $stmt->bindValue(":userId", $userId, PDO::PARAM_INT);
 $stmt->bindValue(":name", $name, PDO::PARAM_STR);
 $stmt->execute();
 
-header('Location: index.php');
+//header('Location: index.php');
 
 ?>

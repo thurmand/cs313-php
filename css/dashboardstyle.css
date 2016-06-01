@@ -246,6 +246,12 @@ img
     background-color: grey;
 }
 
+#subName
+{
+    display: "none";
+    font-size: 1vw;
+}
+
 @media (max-width: 720px)
 {
     #main
