@@ -174,15 +174,13 @@ function editWeapons(){
                 var response = JSON.parse(xhttp.responseText)
                 console.log(response)
                 weaponResponse = compileView(response)
+                console.log(weaponResponse)
+                //        weaponList.innerHTML = weaponResponse
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
-                
-        console.log(weaponResponse)
-        
-//        weaponList.innerHTML = weaponResponse
-        
+                            
         
     }else{
         
