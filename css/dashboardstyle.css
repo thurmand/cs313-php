@@ -240,6 +240,11 @@ img
      cursor: pointer;
 }
 
+#canName
+{
+    display: none;
+}
+
 #canName:hover
 {
     cursor: pointer;
