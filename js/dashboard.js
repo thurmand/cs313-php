@@ -151,8 +151,6 @@ function saveBSkills(){
 
 function editWeapons(){
     var xhttp = new XMLHttpRequest();
-//    var url = "getWeapons.php?userId="
-    var text = []
     var skills = document.getElementById("skills")
     var armour = document.getElementById("armour")
     var weapons = document.getElementById("weapons")
@@ -172,8 +170,9 @@ function editWeapons(){
         xhttp.onreadystatechange = function()
         {
             if (xhttp.readyState == 4) {                
-                text = xhttp.responseText 
-                console.log(text)
+                var weaponResponse = JSON.parse(xhttp.responseText)
+            console.log(weaponResponse)
+            
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);

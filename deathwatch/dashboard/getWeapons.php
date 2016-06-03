@@ -28,8 +28,8 @@ catch(PDOException $e){
     echo $e->getMessage();
 }
 
-var_dump($weapons);
+//var_dump($weapons);
 
-//echo json_encode($weapons);
+echo json_encode($weapons);
 
 ?>
