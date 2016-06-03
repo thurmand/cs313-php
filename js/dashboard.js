@@ -156,6 +156,7 @@ function editWeapons(){
     var weapons = document.getElementById("weapons")
     var divider = document.getElementsByClassName("divider")
     var weaponList = document.getElementById("weaponList")
+    var weaponResponse = ""
     
     if(arguments[0] == 1){
        
@@ -170,15 +171,17 @@ function editWeapons(){
         xhttp.onreadystatechange = function()
         {
             if (xhttp.readyState == 4) {                
-                var weaponResponse = JSON.parse(xhttp.responseText)
-            console.log(weaponResponse)
-            
+                var response = JSON.parse(xhttp.responseText)
+                console.log(response)
+                weaponResponse = compileView(response)
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
+                
+        console.log(weaponResponse)
         
-//        weaponList.innerHTML =
+//        weaponList.innerHTML = weaponResponse
         
         
     }else{
@@ -192,4 +195,15 @@ function editWeapons(){
         skills.style.display = "block"
         
     }
+}
+
+function compileView(wList){
+    
+    var text
+    
+    for(var i = 0; i < wList.length; ++i){
+        text += wList[i]
+    }
+    
+    return text 
 }
