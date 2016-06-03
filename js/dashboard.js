@@ -156,6 +156,7 @@ function editWeapons(){
     var weapons = document.getElementById("weapons")
     var divider = document.getElementsByClassName("divider")
     var weaponList = document.getElementById("weaponList")
+    var weaponBlock = document.getElementsByClassName("weaponBlock")
     var weaponResponse = ""
     
     if(arguments[0] == 1){
@@ -180,7 +181,15 @@ function editWeapons(){
         }
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
-                            
+        
+        weaponList.style.display = "flex"
+        weaponList.style.flexDirection = "row"
+        weaponList.style.flexWarp = "wrap"
+        weaponList.style.justifyContent = "space-between"
+        
+        
+        
+        weaponBlock.style.width = "25%"
         
     }else{
         

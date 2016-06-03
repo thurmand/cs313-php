@@ -19,7 +19,6 @@ try{
             <div>'. $row['description'] . '</div>
             <div>Base Damage: ' . $row['damage'] . '</div>
             <div>Penetration: ' . $row['penetration'] . '</div>
-            <hr>
             </div>';
         $i++;
     }
