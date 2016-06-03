@@ -177,6 +177,12 @@ function editWeapons(){
                 weaponResponse = compileView(response)
                 console.log(weaponResponse)
                 weaponList.innerHTML = weaponResponse
+                
+                for(var i = 0;i < weaponBlock.length; i++){
+                weaponBlock[i].style.width = "25%"
+                weaponBlock[i].style.fontSize = "1.2vw"
+                weaponBlock[i].style.backgroundColor = "rgba(80, 80, 80, 0.51)"
+        }
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
@@ -186,14 +192,12 @@ function editWeapons(){
         weaponList.style.flexDirection = "row"
         weaponList.style.flexWarp = "wrap"
         weaponList.style.justifyContent = "space-between"
+        weaponList.style.padding = "20px 60px"
         
-        
-        
-        weaponBlock.style.width = "25%"
         
     }else{
         
-        for(var i=0;i<divider.length;i++){
+        for(var i=0;i<weaponBlock.length;i++){
                 divider[i].style.display = "block"
         }
 
