@@ -182,6 +182,9 @@ function editWeapons(){
                 weaponBlock[i].style.width = "25%"
                 weaponBlock[i].style.fontSize = "1.2vw"
                 weaponBlock[i].style.backgroundColor = "rgba(80, 80, 80, 0.51)"
+                weaponBlock[i].style.borderRadius = "15px"
+                weaponBlock[i].style.margin = "0px 10px"
+                weaponBlock[i].style.padding = ".5% 1%"
         }
             }   
         }
@@ -192,7 +195,7 @@ function editWeapons(){
         weaponList.style.flexDirection = "row"
         weaponList.style.flexWarp = "wrap"
         weaponList.style.justifyContent = "space-between"
-        weaponList.style.padding = "20px 60px"
+        weaponList.style.padding = "0px 2%"
         
         
     }else{
