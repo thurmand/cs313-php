@@ -179,7 +179,7 @@ function editWeapons(){
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
         
-        weaponList.innerHTML =
+//        weaponList.innerHTML =
         
         
     }else{
@@ -191,11 +191,6 @@ function editWeapons(){
         armour.style.display = "block"
         weapons.style.width = "32%"
         skills.style.display = "block"
-        
-        
-        if(arguments[0]==0){
-            saveBSkills()
-        }
         
     }
 }
