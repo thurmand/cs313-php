@@ -173,7 +173,7 @@ function editWeapons(){
         {
             if (xhttp.readyState == 4) {                
                 text = xhttp.responseText 
-                console.log(JSON.parse(text))
+                console.log(text)
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
