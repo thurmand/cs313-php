@@ -9,7 +9,6 @@ function setup(){
     }
     num = document.getElementsByClassName("num")
     skillInputs = document.getElementsByClassName("sInput")
-    document.getElementById('canName').style.display = "none"
     
     preCharName = document.getElementById("cName").innerText
     
@@ -151,11 +150,14 @@ function saveBSkills(){
 }
 
 function editWeapons(){
-    
-     var skills = document.getElementById("skills")
+    var xhttp = new XMLHttpRequest();
+//    var url = "getWeapons.php?userId="
+    var text = []
+    var skills = document.getElementById("skills")
     var armour = document.getElementById("armour")
     var weapons = document.getElementById("weapons")
     var divider = document.getElementsByClassName("divider")
+    var weaponList = document.getElementById("weaponList")
     
     if(arguments[0] == 1){
        
@@ -167,6 +169,17 @@ function editWeapons(){
         weapons.style.width = "100%"
         skills.style.display = "none"
         
+        xhttp.onreadystatechange = function()
+        {
+            if (xhttp.readyState == 4) {                
+                text = xhttp.responseText 
+                console.log(text)
+            }   
+        }
+        xhttp.open("GET", "getWeapons.php", true);
+        xhttp.send();
+        
+        weaponList.innerHTML =
         
         
     }else{
@@ -183,8 +196,6 @@ function editWeapons(){
         if(arguments[0]==0){
             saveBSkills()
         }
-        /*else{
-            location.reload();
-        }*/
+        
     }
 }
