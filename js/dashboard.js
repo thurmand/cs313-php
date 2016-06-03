@@ -61,7 +61,7 @@ function noNameCh(){
 }
 
 function changeName(){
-    document.getElementById("modName").submit
+    document.getElementById("modName").submit()
 }
 
 function editBSkills(){
