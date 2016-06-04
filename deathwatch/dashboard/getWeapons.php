@@ -14,7 +14,7 @@ try{
     foreach ($db->query("SELECT name, description, damage, penetration
                         FROM weapons")as $row){
         
-        $weapons[$i] = '<div class="weaponBlock">
+        $weapons[$i] = '<div class="weaponBlock1">
             <div>' . $row['name'] . '</div>
             <div>'. $row['description'] . '</div>
             <div>Base Damage: ' . $row['damage'] . '</div>

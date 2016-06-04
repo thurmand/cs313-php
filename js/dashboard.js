@@ -156,7 +156,6 @@ function editWeapons(){
     var weapons = document.getElementById("weapons")
     var divider = document.getElementsByClassName("divider")
     var weaponList = document.getElementById("weaponList")
-    var weaponBlocks = document.getElementsByClassName("weaponBlock")
     var weaponResponse = ""
     
     if(arguments[0] == 1){
@@ -168,7 +167,6 @@ function editWeapons(){
         armour.style.display = "none"
         weapons.style.width = "100%"
         skills.style.display = "none"
-        weaponBlocks.class = "weaponBlock1"
         
         xhttp.onreadystatechange = function()
         {
