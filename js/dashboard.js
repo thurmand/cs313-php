@@ -175,7 +175,7 @@ function editWeapons(){
                 console.log(response)
                 weaponResponse = compileView(response)
                 console.log(weaponResponse)
-                weaponList.innerHTML = weaponResponse
+                weaponList.innerHTML = "Click on a weapon to add/remove it<br>" + weaponResponse
                 
                 /*for(var i = 0;i < weaponBlock.length; i++){
                 weaponBlock[i].style.width = "25%"
