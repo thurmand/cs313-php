@@ -156,7 +156,7 @@ function editWeapons(){
     var weapons = document.getElementById("weapons")
     var divider = document.getElementsByClassName("divider")
     var weaponList = document.getElementById("weaponList")
-    var weaponBlock = document.getElementsByClassName("weaponBlock")
+    var weaponBlocks = document.getElementsByClassName("weaponBlock")
     var weaponResponse = ""
     
     if(arguments[0] == 1){
@@ -168,6 +168,7 @@ function editWeapons(){
         armour.style.display = "none"
         weapons.style.width = "100%"
         skills.style.display = "none"
+        weaponBlocks.class = "weaponBlock1"
         
         xhttp.onreadystatechange = function()
         {
@@ -178,14 +179,14 @@ function editWeapons(){
                 console.log(weaponResponse)
                 weaponList.innerHTML = weaponResponse
                 
-                for(var i = 0;i < weaponBlock.length; i++){
+                /*for(var i = 0;i < weaponBlock.length; i++){
                 weaponBlock[i].style.width = "25%"
                 weaponBlock[i].style.fontSize = "1.2vw"
                 weaponBlock[i].style.backgroundColor = "rgba(80, 80, 80, 0.51)"
                 weaponBlock[i].style.borderRadius = "15px"
                 weaponBlock[i].style.margin = "0px 10px"
                 weaponBlock[i].style.padding = ".5% 1%"
-        }
+        }*/
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
