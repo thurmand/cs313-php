@@ -18,6 +18,10 @@
     $stmt->execute(array(':userID' => $userID));
     $user = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+    if($user[0]['char_name'] == null || $user[0]['char_name'] == ''){
+        $user[0]['char_name'] = 'NAME';
+    }
+
     $stmt = $db->prepare("SELECT * 
                             FROM skills 
                             WHERE user_id = :userID;");
@@ -66,12 +70,15 @@
             <div class="sideTitle">Username:</div>
             <div><?php echo $user[0]['username'];?></div>
             <div class="sideTitle">Character Name:</div>
-            <div><?php echo $user[0]['char_name'];?><hr></div>
+            <div id="cName" onclick="editName()"><?php echo $user[0]['char_name'];?></div>
+            <div id="subName" onclick="changeName()">Submit</div>
+            <div id="canName" onclick="noNameCh()">Cancel</div>
+            <div><hr></div>
             <div id="editB" onclick="editMenuShow()" class="sideBut">Edit</div>
             <div id="edAbles">
                 <div onclick="editBSkills(1)" class="sideBut">Basic Skills</div>
 <!--                <div onclick="" class="sideBut">Armour</div>-->
-                <div onclick="editWepaons(1)" class="sideBut">Weapons</div>
+                <div onclick="editWeapons(1)" class="sideBut">Weapons</div>
             </div>
                 
         </div>

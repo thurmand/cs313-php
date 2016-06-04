@@ -8,8 +8,8 @@ $p = htmlspecialchars($_POST['pass']);
 
 $db = connectToDb();
 
-$stmt = $db->prepare("SELECT id, password FROM users WHERE username=:username AND password=:password");
-$stmt->execute(array(':username' => $username, ':password' => $p));
+$stmt = $db->prepare("SELECT id, password FROM users WHERE username=:username");
+$stmt->execute(array(':username' => $username));
 $userID = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 

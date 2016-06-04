@@ -1,5 +1,5 @@
 <?php
-require("dbConnect.php");
+require("../dbConnect.php");
 $db = connectToDb();
 
 $username = htmlspecialchars($_GET['username']);
