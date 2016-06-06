@@ -217,7 +217,9 @@ function compileView(wList){
 
 function setWeaponListeners(){
     var blocks = document.getElementsByClassName("weaponBlock1")
-    blocks.addEventListener("click", clickOnWeapon)
+    for(var i = 0;i < blocks.length; i++){
+        blocks[i].addEventListener("click", clickOnWeapon, false)
+    }
 }
 
 function clickOnWeapon(event){
