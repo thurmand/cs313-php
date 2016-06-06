@@ -177,6 +177,7 @@ function editWeapons(){
                 weaponResponse = compileView(response)
                 //console.log(weaponResponse)
                 weaponList.innerHTML = weaponResponse
+                setWeaponListeners()
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
@@ -212,4 +213,13 @@ function compileView(wList){
     }
     
     return text 
+}
+
+function setWeaponListeners(){
+    var blocks = document.getElementsByClassName("weaponBlock1")
+    blocks.addEventListener("click", clickOnWeapon)
+}
+
+function clickOnWeapon(event){
+    console.log(event)
 }
