@@ -262,14 +262,16 @@ function saveWeapons(){
     var xhttp = new XMLHttpRequest();
     var url = "saveWeapons.php?selected="
     
-    if(selection.length != 0){
-        for(var i = 0;i < blocks.length; i++){
-
-            if(block[i].style.borderColor == "green"){
-                selection.push(blocks[i].id)
-            }
+    for(var i = 0;i < blocks.length; i++){
+        if(block[i].style.borderColor == "green"){
+            selection.push(blocks[i].id)
         }
-        console.log(selection)
+    }
+
+    console.log(selection, selection.length)
+    
+    if(selection.length != 0){
+        
         url += JSON.stringify(selection)
         console.log(url)
 
