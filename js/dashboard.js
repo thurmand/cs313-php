@@ -223,5 +223,5 @@ function setWeaponListeners(){
 }
 
 function clickOnWeapon(event){
-    console.log(event)
+    console.log(event, this)
 }
