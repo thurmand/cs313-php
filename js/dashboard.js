@@ -281,8 +281,8 @@ function saveWeapons(){
                 
             }   
         }
-//        xhttp.open("POST", url, true);
-//        xhttp.send();
+        xhttp.open("POST", url, true);
+        xhttp.send();
         
     }
 }
