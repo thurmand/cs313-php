@@ -168,7 +168,8 @@ img
     background-color: rgba(80, 80, 80, 0.51);
     border-radius: 15px;
     margin: 0px 10px;
-    padding: .5% 1%
+    padding: .5% 1%;
+    border-style: hidden;
 }
 
 .weaponBlock1:hover
@@ -279,10 +280,6 @@ img
     background-color: grey;
 }
 
-weaponForm
-{
-    display: none;
-}
 
 @media (max-width: 720px)
 {
