@@ -11,10 +11,7 @@ function setup(){
     skillInputs = document.getElementsByClassName("sInput")
     
     preCharName = document.getElementById("cName").innerText
-    
-  /*  if(document.getElementById("cName") == 'NAME'){
-        editName()
-    }*/
+    preWeaponData = document.getElementById("weaponList").innerHTML
 }
 
 function editMenuShow(){
@@ -122,9 +119,6 @@ function editBSkills(){
             saveBSkills()
         }
         
-        /*else{
-            location.reload();
-        }*/
     }
 }
 
@@ -211,10 +205,20 @@ function editWeapons(){
         weaponList.style.flexWarp = ""
         weaponList.style.justifyContent = ""
         weaponList.style.padding = ""
+        weaponList.innerHTML = preWeaponData
         
         subButton.style.display = "none"
         canButton.style.display = "none"
         
+        xhttp.onreadystatechange = function()
+        {
+            if (xhttp.readyState == 4) {                
+                var response = JSON.parse(xhttp.responseText)
+            }   
+        }
+        xhttp.open("GET", "getWeapons.php", true);
+        xhttp.send();
+    
     }
 }
 
@@ -258,19 +262,16 @@ function saveWeapon(){
     var xhttp = new XMLHttpRequest();
     var url = "saveWeapons.php?selected="
     
-    for(var i = 0;i < blocks.length; i++){
-        
-        if(block[i].style.borderColor == "green"){
-            selection.push(blocks[i].id)
-        }
-    }
-    console.log(selection)
-    
-    url += JSON.stringify(selection)
-    
-    console.log(url)
-    
     if(selection.length != 0){
+        for(var i = 0;i < blocks.length; i++){
+
+            if(block[i].style.borderColor == "green"){
+                selection.push(blocks[i].id)
+            }
+        }
+        console.log(selection)
+        url += JSON.stringify(selection)
+        console.log(url)
 
         xhttp.onreadystatechange = function()
         {
