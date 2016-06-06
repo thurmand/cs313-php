@@ -224,4 +224,8 @@ function setWeaponListeners(){
 
 function clickOnWeapon(event){
     console.log(event, this)
+    
+   /* if(this.style.backgroundColor == "")
+    "<form id='weaponForm' action='editWeapon.php' method='POST'></form>"*/
+    
 }

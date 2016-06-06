@@ -279,6 +279,11 @@ img
     background-color: grey;
 }
 
+weaponForm
+{
+    display: none;
+}
+
 @media (max-width: 720px)
 {
     #main
