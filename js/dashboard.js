@@ -155,6 +155,7 @@ function editWeapons(){
     var armour = document.getElementById("armour")
     var weapons = document.getElementById("weapons")
     var divider = document.getElementsByClassName("divider")
+    var title = document.getElementsByClassName("title")
     var weaponList = document.getElementById("weaponList")
     var weaponResponse = ""
     
@@ -172,24 +173,16 @@ function editWeapons(){
         {
             if (xhttp.readyState == 4) {                
                 var response = JSON.parse(xhttp.responseText)
-                console.log(response)
+                //console.log(response)
                 weaponResponse = compileView(response)
-                console.log(weaponResponse)
-                weaponList.innerHTML = "Click on a weapon to add/remove it<br>" + weaponResponse
-                
-                /*for(var i = 0;i < weaponBlock.length; i++){
-                weaponBlock[i].style.width = "25%"
-                weaponBlock[i].style.fontSize = "1.2vw"
-                weaponBlock[i].style.backgroundColor = "rgba(80, 80, 80, 0.51)"
-                weaponBlock[i].style.borderRadius = "15px"
-                weaponBlock[i].style.margin = "0px 10px"
-                weaponBlock[i].style.padding = ".5% 1%"
-        }*/
+                //console.log(weaponResponse)
+                weaponList.innerHTML = weaponResponse
             }   
         }
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
         
+        title.innerHTML += "<br>Click on a Weapon to add/remove"
         weaponList.style.display = "flex"
         weaponList.style.flexDirection = "row"
         weaponList.style.flexWarp = "wrap"
