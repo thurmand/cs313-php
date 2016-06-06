@@ -157,6 +157,8 @@ function editWeapons(){
     var divider = document.getElementsByClassName("divider")
     var title = document.getElementsByClassName("title")
     var weaponList = document.getElementById("weaponList")
+    var subButton = document.getElementById("subWeapon")
+    var canButton = document.getElementById("canWeapon")
     var weaponResponse = ""
     
     if(arguments[0] == 1){
@@ -190,6 +192,8 @@ function editWeapons(){
         weaponList.style.justifyContent = "space-between"
         weaponList.style.padding = "0px 2%"
         
+        subButton.style.display = "block"
+        canButtonstyle.display = "block"
         
     }else{
         

@@ -178,6 +178,30 @@ img
     background-color: rgba(117, 117, 117, 0.509804);
 }
 
+#subWeapon
+{
+    display: none;
+    font-size: 1vw;
+}
+
+#subWeapon:hover
+{
+    cursor: pointer;
+    background-color: grey;
+}
+
+#canWeapon
+{
+    display: none;
+    font-size: 1vw;
+}
+
+#canWeapon:hover
+{    
+    cursor: pointer;
+    background-color: grey;  
+}
+
 #edAbles
 {
     height: 0px;

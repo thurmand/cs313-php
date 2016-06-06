@@ -79,6 +79,8 @@
                 <div onclick="editBSkills(1)" class="sideBut">Basic Skills</div>
 <!--                <div onclick="" class="sideBut">Armour</div>-->
                 <div onclick="editWeapons(1)" class="sideBut">Weapons</div>
+                <div id="subWeapon" onclick="saveWeapon()">Submit</div>
+                <div id="canWeapon" onclick="editWeapons(0)">Cancel</div>
             </div>
                 
         </div>
