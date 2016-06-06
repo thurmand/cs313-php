@@ -263,7 +263,7 @@ function saveWeapons(){
     var url = "saveWeapons.php?selected="
     
     for(var i = 0;i < blocks.length; i++){
-        if(block[i].style.borderColor == "green"){
+        if(blocks[i].style.borderColor == "green"){
             selection.push(blocks[i].id)
         }
     }
@@ -281,8 +281,8 @@ function saveWeapons(){
                 
             }   
         }
-        xhttp.open("POST", url, true);
-        xhttp.send();
+//        xhttp.open("POST", url, true);
+//        xhttp.send();
         
     }
 }
