@@ -225,13 +225,14 @@ function setWeaponListeners(){
 function clickOnWeapon(event){
     console.log(event, this)
     
-    if(this.style.border == ""){
-        
-        
+    if(this.style.borderColor == ""){
+        this.style.borderStyle = "solid"
+        this.style.borderColor = "green"
         
     }else{
         
-        
+        this.style.borderStyle = ""
+        this.style.borderColor = ""
         
     }
     
