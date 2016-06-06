@@ -262,6 +262,7 @@ function saveWeapon(){
         
         if(block[i].style.borderColor == "green"){
             selection.push(blocks[i].id)
+        }
     }
     console.log(selection)
     
