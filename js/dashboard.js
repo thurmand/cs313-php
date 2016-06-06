@@ -183,7 +183,7 @@ function editWeapons(){
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
         
-        title[2].innerHTML += "<div style='font-size:1.2vw'>Click on a Weapon to add/remove</div>"
+        title[2].innerHTML += "<div style='font-size:1.2vw'>Click on a Weapon to <span style='font-color: gree'>add</span>/remove</div>"
         weaponList.style.display = "flex"
         weaponList.style.flexDirection = "row"
         weaponList.style.flexWarp = "wrap"
@@ -225,7 +225,14 @@ function setWeaponListeners(){
 function clickOnWeapon(event){
     console.log(event, this)
     
-   /* if(this.style.backgroundColor == "")
-    "<form id='weaponForm' action='editWeapon.php' method='POST'></form>"*/
+    if(this.style.border == ""){
+        
+        
+        
+    }else{
+        
+        
+        
+    }
     
 }
