@@ -183,7 +183,7 @@ function editWeapons(){
         xhttp.open("GET", "getWeapons.php", true);
         xhttp.send();
         
-        title[2].innerHTML += "<div style='font-size:1.2vw'>Click on a Weapon to <span style='font-color: gree'>add</span>/remove</div>"
+        title[2].innerHTML += "<div style='font-size:1.2vw'>Click on a Weapon to <span style='color: green'>add</span>/<span style='color: red'>remove</span></div>"
         weaponList.style.display = "flex"
         weaponList.style.flexDirection = "row"
         weaponList.style.flexWarp = "wrap"
