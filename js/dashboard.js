@@ -260,7 +260,7 @@ function saveWeapons(){
     var blocks = document.getElementsByClassName("weaponBlock1")
     var selection = []
     var xhttp = new XMLHttpRequest();
-    var url = "saveWeapons.php?selected="
+    var url = "selected="
     
     for(var i = 0;i < blocks.length; i++){
         if(blocks[i].style.borderColor == "green"){
@@ -281,8 +281,8 @@ function saveWeapons(){
                 
             }   
         }
-        xhttp.open("POST", url, true);
-        xhttp.send();
+        xhttp.open("POST", "saveWeapons.php", true);
+        xhttp.send(url);
         
     }
 }
