@@ -205,7 +205,7 @@ function editWeapons(){
         weapons.style.width = "32%"
         skills.style.display = "block"
         
-        title[2].innerHTML = "Weapons
+        title[2].innerHTML = "Weapons"
         weaponList.style.display = ""
         weaponList.style.flexDirection = ""
         weaponList.style.flexWarp = ""
