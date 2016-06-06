@@ -11,8 +11,7 @@ $db = connectToDb();
 $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 try{
-    foreach ($db->query("SELECT id, name, description, damage, penetration
-                        FROM weapons")as $row){
+    foreach ($db->query("SELECT id, name, description, damage, penetration FROM weapons")as $row){
         
         $weapons[$i] = '<div id=' . $row['id'] . ' class="weaponBlock1">
             <div>' . $row['name'] . '</div>

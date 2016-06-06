@@ -193,17 +193,27 @@ function editWeapons(){
         weaponList.style.padding = "0px 2%"
         
         subButton.style.display = "block"
-        canButtonstyle.display = "block"
+        canButton.style.display = "block"
         
     }else{
         
-        for(var i=0;i<weaponBlock.length;i++){
+        for(var i=0;i<divider.length;i++){
                 divider[i].style.display = "block"
         }
 
         armour.style.display = "block"
         weapons.style.width = "32%"
         skills.style.display = "block"
+        
+        title[2].innerHTML = "Weapons
+        weaponList.style.display = ""
+        weaponList.style.flexDirection = ""
+        weaponList.style.flexWarp = ""
+        weaponList.style.justifyContent = ""
+        weaponList.style.padding = ""
+        
+        subButton.style.display = "none"
+        canButton.style.display = "none"
         
     }
 }
@@ -240,4 +250,35 @@ function clickOnWeapon(event){
         
     }
     
+}
+
+function saveWeapon(){
+    var blocks = document.getElementsByClassName("weaponBlock1")
+    var selection = []
+    var xhttp = new XMLHttpRequest();
+    var url = "saveWeapons.php?selected="
+    
+    for(var i = 0;i < blocks.length; i++){
+        
+        if(block[i].style.borderColor == "green"){
+            selection.push(blocks[i].id)
+    }
+    console.log(selection)
+    
+    url += JSON.stringify(selection)
+    
+    console.log(url)
+    
+    if(selection.length != 0){
+
+        xhttp.onreadystatechange = function()
+        {
+            if (xhttp.readyState == 4) {                
+                
+            }   
+        }
+        xhttp.open("POST", url, true);
+        xhttp.send();
+        
+    }
 }
