@@ -17,5 +17,5 @@ var_dump($selected);
     $i++;
 }*/
 
-header('Location: index.php');
+//header('Location: index.php');
 ?>

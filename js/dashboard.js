@@ -278,7 +278,8 @@ function saveWeapons(){
         xhttp.onreadystatechange = function()
         {
             if (xhttp.readyState == 4) {                
-                
+                var text = xhttp.responseText
+                console.log(text)
             }   
         }
         xhttp.open("POST", "saveWeapons.php", true);
