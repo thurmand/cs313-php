@@ -256,7 +256,7 @@ function clickOnWeapon(event){
     
 }
 
-function saveWeapon(){
+function saveWeapons(){
     var blocks = document.getElementsByClassName("weaponBlock1")
     var selection = []
     var xhttp = new XMLHttpRequest();
