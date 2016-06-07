@@ -8,6 +8,8 @@ $userID = $_SESSION['userID'];
 $item = json_decode($_GET['selected']);
 var_dump($item);
 
+$db = connectToDb();
+
 foreach($item as $value){
    
    $stmt = $db->prepare("INSERT INTO users_weapons (user_id, weapon_id)
