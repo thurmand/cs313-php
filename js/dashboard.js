@@ -271,7 +271,7 @@ function saveWeapons(){
                     console.log(text)
                 }   
             }
-            xhttp.open("GET", "saveWeapons.php" + selection[i], true);
+            xhttp.open("GET", "saveWeapons.php?=selected=" + selection[i], true);
             xhttp.send();
         }
     }
