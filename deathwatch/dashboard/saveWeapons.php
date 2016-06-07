@@ -5,8 +5,8 @@ session_start();
 
 $userID = $_SESSION['userID'];
 
-$item = $_GET['selected'];
-echo $item;
+$item = json_decode($_GET['selected']);
+var_dump($item);
 
 /*$db->prepare("INSERT INTO users_weapons
                 VALUES(:userID, :selected)"));

@@ -262,7 +262,7 @@ function saveWeapons(){
     
     if(selection.length != 0){
         
-        for(var i=0;i<selection.length;i++){
+//        for(var i=0;i<selection.length;i++){
             console.log("looping")
             xhttp.onreadystatechange = function()
             {
@@ -271,8 +271,8 @@ function saveWeapons(){
                     console.log(text)
                 }   
             }
-            xhttp.open("GET", "saveWeapons.php?selected=" + selection[i], true);
+            xhttp.open("GET", "saveWeapons.php?selected=" + JSON.stringify(selection), true);
             xhttp.send();
-        }
+//        }
     }
 }
