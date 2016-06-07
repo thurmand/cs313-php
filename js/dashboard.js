@@ -274,16 +274,17 @@ function saveWeapons(){
         
         url += JSON.stringify(selection)
         console.log(url)
-
-        xhttp.onreadystatechange = function()
-        {
-            if (xhttp.readyState == 4) {                
-                var text = xhttp.responseText
-                console.log(text)
-            }   
-        }
-        xhttp.open("POST", "saveWeapons.php", true);
-        xhttp.send(url);
         
+        for(var i=0;i<selection.length;i++){
+            xhttp.onreadystatechange = function()
+            {
+                if (xhttp.readyState == 4) {                
+                    var text = xhttp.responseText
+                    console.log(text)
+                }   
+            }
+            xhttp.open("POST", "saveWeapons.php", true);
+            xhttp.send(url);
+        }
     }
 }
