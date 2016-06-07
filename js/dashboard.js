@@ -263,7 +263,7 @@ function saveWeapons(){
     if(selection.length != 0){
         
         for(var i=0;i<selection.length;i++){
-            console.log(looping)
+            console.log("looping")
             xhttp.onreadystatechange = function()
             {
                 if (xhttp.readyState == 4) {                
