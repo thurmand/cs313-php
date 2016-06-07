@@ -17,5 +17,5 @@ foreach($item as $value){
                 WHERE NOT EXISTS (SELECT * FROM users_weapons WHERE weapon_id = :selected AND user_id = :userID)");
    $stmt->execute(array(':userID' => $userID, ':selected' => $value));
 }
-//header('Location: index.php');
+    header('Location: index.php');
 ?>
