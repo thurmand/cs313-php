@@ -209,16 +209,7 @@ function editWeapons(){
         
         subButton.style.display = "none"
         canButton.style.display = "none"
-        
-        xhttp.onreadystatechange = function()
-        {
-            if (xhttp.readyState == 4) {                
-                var response = JSON.parse(xhttp.responseText)
-            }   
-        }
-        xhttp.open("GET", "getWeapons.php", true);
-        xhttp.send();
-    
+            
     }
 }
 
@@ -260,7 +251,6 @@ function saveWeapons(){
     var blocks = document.getElementsByClassName("weaponBlock1")
     var selection = []
     var xhttp = new XMLHttpRequest();
-    var url = "selected="
     
     for(var i = 0;i < blocks.length; i++){
         if(blocks[i].style.borderColor == "green"){
@@ -272,10 +262,8 @@ function saveWeapons(){
     
     if(selection.length != 0){
         
-        url += JSON.stringify(selection)
-        console.log(url)
-        
         for(var i=0;i<selection.length;i++){
+            console.log(looping)
             xhttp.onreadystatechange = function()
             {
                 if (xhttp.readyState == 4) {                
@@ -284,7 +272,7 @@ function saveWeapons(){
                 }   
             }
             xhttp.open("POST", "saveWeapons.php", true);
-            xhttp.send(url);
+            xhttp.send("selected=" + selection[i]);
         }
     }
 }
