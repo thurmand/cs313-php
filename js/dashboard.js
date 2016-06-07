@@ -275,4 +275,5 @@ function saveWeapons(){
             xhttp.send();
 //        }
     }
+    editWeapons(0)
 }
