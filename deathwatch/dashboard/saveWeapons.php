@@ -9,7 +9,7 @@ $item = json_decode($_GET['selected']);
 var_dump($item);
 
 foreach($item as $value){
-    echo $value
+    echo $value;
    // $db->prepare("INSERT INTO users_weapons
    //                 VALUES(:userID, :selected)");
    // $stmt->execute(array(':userID' => $userID, ':selected' => $value));
